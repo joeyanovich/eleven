@@ -38,7 +38,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
     background-color: var(--gray-200);
+
+
+    padding-bottom: 1000px;
 }
 .video-bg{
     height: 100vh;
@@ -56,7 +60,7 @@ body{
     align-items: center;
     margin-top: 9rem;
     margin-bottom: 4rem;
-    width: 1280px;
+    max-width: 1280px;
     height: 500px;
     border-radius: 1.5rem;
     background-color: var(--white-200);
@@ -104,4 +108,128 @@ body{
 .quad span{
     text-align: center;
     font-size: 16px;
+}
+.segmentos, .clientes, .solucoes, .combinacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5rem 0;
+}
+.segmentos h2, .clientes h2, .solucoes h2, .combinacao h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+}
+.segmentos{
+    height: 200px;
+    width: 1000px;
+    background-color: white;
+}
+.clientes{
+    height: 200px;
+    width: 1000px;
+    background-color: white;
+}
+.solucoes{
+    max-width: 1280px;
+}
+.solucoes p{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    font-size: 18px;
+}
+.cards-solucoes{
+    margin: 5rem 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 1.5rem;
+    font-size: 13px;
+    text-align: center;
+    background-color: var(--gray-200);
+    border: 1px solid var(--white-100);
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.15);
+}
+.img-card, .cards span{
+    flex: 1;
+}
+.img-card{
+    padding-top: 1rem;
+}
+.cards img{
+    width: 5rem;
+    height: 5rem;
+}
+.cards .solucoes-bg-icon{
+    position: absolute;
+    top: 1.75rem;
+    left: 1.75rem;
+}
+.combinacao .comb-p{
+    margin: 5rem 0;
+    text-align: center;
+    width: 800px;
+    font-size: 18px;
+}
+.combinacao h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 9rem;
+}
+.cotainer-segmento{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1158px;
+}
+.seg-img{
+    display: flex;
+    justify-content: space-between;
+}
+.seg-img div img{
+    width: 443px;
+    height: 665.16px;
+    border-radius: 1.5rem;
+    filter: blur(4px);
+}
+.seg-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    position: absolute;
+    width: 100%;
+}
+.seg-text .text-up, .seg-text .text-down{
+    width: 50%;
+    justify-content: start;
+    margin: 20px 56px 20px 20px;
+    padding: 48px;
+    border-radius: 1.5rem;
+    background-color: var(--white-150);
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.15);
+} 
+.seg-text h4{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 24px;
+}
+.seg-text p{
+    font-size: 14px;
+}
+.seg-text .text-up, .seg-text .text-down{
+    text-align: left;
 }
