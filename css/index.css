@@ -233,3 +233,21 @@ body{
 .seg-text .text-up, .seg-text .text-down{
     text-align: left;
 }
+footer{
+    position: relative;
+    min-height: 900px;
+    width: 100%;
+    background-image: url("../assets/img-footer/fundo.png");
+}
+.footer-bg-op{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/img-footer/fundo-opacidade.png");
+}
+.footer-bg-op{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/img-footer/fundo-opacidade.png");
+}
