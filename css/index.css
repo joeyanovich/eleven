@@ -4,8 +4,8 @@
     --blue-900: #012f57;
     --pink-50: rgba(255, 14, 209, 0.25);
     --pink-500: #ff0ed1;
-    --blue-600: #C60CA2;
-    --blue-800: #610950;
+    --pink-600: #C60CA2;
+    --pink-800: #610950;
     --black-100: rgba(0, 0, 0, 0.4);
     --black-200: #363636;
     --black-900: #222222;
@@ -131,7 +131,7 @@ body{
     background-color: white;
 }
 .solucoes{
-    max-width: 1280px;
+    max-width: 1440px;
 }
 .solucoes p{
     margin-top: 2rem;
@@ -142,8 +142,11 @@ body{
 .cards-solucoes{
     margin: 5rem 0;
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .cards{
     display: flex;
@@ -234,20 +237,229 @@ body{
     text-align: left;
 }
 footer{
+    display: flex;
     position: relative;
+    margin-top: 7rem;
     min-height: 900px;
     width: 100%;
     background-image: url("../assets/img-footer/fundo.png");
 }
-.footer-bg-op{
+/* QUADRADO 1 ROSA ESQUERDA */
+.left-pink-container{
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("../assets/img-footer/fundo-opacidade.png");
+    animation: left-pink 10s ease-in-out infinite;
 }
+.ret-left-pink{
+    position: absolute;
+    top: -3rem;
+    left: -5rem;
+    filter: blur(4px);
+    width: 12rem;
+    height: 12rem;
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes left-pink {
+    0%{
+        top: 0px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+  }
+  /* QUADRADO AZUL ESQUERDA */
+.left-blue-container{
+    position: absolute;
+    animation: left-blue 5s ease-in-out infinite;
+}
+.ret-left-blue{
+    position: absolute;
+    width: 20rem;
+    height: 16rem;
+    top: 4rem;
+    left: -7rem;
+    filter: blur(4px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes left-blue {
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: 0;
+    }
+}
+/* QUADRADO 2 ROSA ESQUERDA */
+.left-pink2-container{
+    position: absolute;
+    animation: left-pink2 8s ease-in-out infinite;
+}
+.ret-left-pink2{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: 6rem;
+    left: 24rem;
+    filter: blur(16px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes left-pink2 {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO AZUL CENTRAL */
+.center-blue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: center-blue 3s ease-in-out infinite;
+    width: 100%;
+}
+.center-center{
+    position: absolute;
+    width: 24rem;
+    height: 14rem;
+    top: -3rem;
+    filter: blur(4px);
+    transform: rotate(-24deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes center-blue {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO ROSA DIREITA */
+.right-pink-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: right-pink 6s ease-in-out infinite;
+    width: 100%;
+}
+.ret-right-pink{
+    position: absolute;
+    width: 8rem;
+    height: 6rem;
+    top: -2.5rem;
+    right: 24rem;
+    filter: blur(12px);
+    transform: rotate(25deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes right-pink {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO AZUL DIREITA */
+.right-blue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: center-blue 10s ease-in-out infinite;
+    width: 100%;
+}
+.ret-right-blue{
+    position: absolute;
+    width: 16rem;
+    height: 15rem;
+    right: -6rem;
+    filter: blur(4px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes center-blue {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* FILTRO COM OPACIDADE DE BG */
 .footer-bg-op{
     position: absolute;
     height: 100%;
     width: 100%;
     background-image: url("../assets/img-footer/fundo-opacidade.png");
+    filter: blur(4px);
+}
+.bgbgbg{
+    position: absolute;
+    background-color: green;
+    object-fit: cover;
+
+}
+footer img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    object-fit: cover;
+}
+.bg-balls{
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-image: url("../assets/img-footer/fundo-footer.png");
+}
+.container-footer{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: red;
+    /* z-index: 2; */
+}
+.logo-footer{
+    height: 100px;
+    width: 300px;
+    background-color: green;
+}
+.logo-footer img{
+    /* position: absolute; */
+    width: 300px;
+    background-color: black;
 }
