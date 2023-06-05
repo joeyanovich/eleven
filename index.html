@@ -62,7 +62,45 @@
     </section>
     <section class="clientes">
         <h2>Clientes</h2>
-        <div class="aqui"></div>
+        
+        <div class="container1-clientes">
+                <img src="./assets/clients-logo/apoiolab-color.png">
+                <img src="./assets/clients-logo/atlantis-color.png">
+                <img src="./assets/clients-logo/biociencia-color.png">
+                <img src="./assets/clients-logo/bioproxjr-color.png">
+                <img src="./assets/clients-logo/gntlab-color.png">
+                <img src="./assets/clients-logo/grupobr4-color.png">
+                <img src="./assets/clients-logo/lanlab-color.png">
+                <img src="./assets/clients-logo/bioxtracta-color.png">
+                <img src="./assets/clients-logo/jflab-color.png">
+                <img src="./assets/clients-logo/apoiolab-color.png">
+                <img src="./assets/clients-logo/atlantis-color.png">
+                <img src="./assets/clients-logo/biociencia-color.png">
+                <img src="./assets/clients-logo/bioproxjr-color.png">
+                <img src="./assets/clients-logo/gntlab-color.png">
+                <img src="./assets/clients-logo/grupobr4-color.png">
+                <img src="./assets/clients-logo/lanlab-color.png">
+                <img src="./assets/clients-logo/bioxtracta-color.png">
+                <img src="./assets/clients-logo/jflab-color.png">
+        </div>
+        <div class="container2-clientes">
+            <img src="./assets/clients-logo/novabio-color.png" />
+            <img src="./assets/clients-logo/omaxlab-color.png" />
+            <img src="./assets/clients-logo/progenix-color.png" />
+            <img src="./assets/clients-logo/rbcc.png" />
+            <img src="./assets/clients-logo/veritas-color.png" />
+            <img src="./assets/clients-logo/zymo-color.png" />
+            <img src="./assets/clients-logo/trissomia-color.png" />
+            <img src="./assets/clients-logo/upbioestoque-color.png" />
+            <img src="./assets/clients-logo/novabio-color.png" />
+            <img src="./assets/clients-logo/omaxlab-color.png" />
+            <img src="./assets/clients-logo/progenix-color.png" />
+            <img src="./assets/clients-logo/rbcc.png" />
+            <img src="./assets/clients-logo/veritas-color.png" />
+            <img src="./assets/clients-logo/zymo-color.png" />
+            <img src="./assets/clients-logo/trissomia-color.png" />
+            <img src="./assets/clients-logo/upbioestoque-color.png" />
+        </div>
     </section>
     <section class="solucoes">
         <h2>Soluções</h2>
@@ -238,8 +276,14 @@
 
     <script>
         const nav = document.querySelector('nav')
-        const menu = document.createElement('div');
+        const container1 = document.querySelector('.container1-clientes')
+        const container2 = document.querySelector('.container2-clientes')
+        let previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+        let x = -130
+        let y = 100
+
+    
         window.addEventListener('scroll', function() {
             var element = document.querySelector('.menu');
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -250,6 +294,31 @@
                 element.style.display = 'none'; // Oculta o elemento
             }
         });
+
+        
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if(scrollPosition >= 1200 && scrollPosition <= 2400){
+                if (scrollPosition > previousScrollPosition) {
+                    x += 7
+                    y -= 7
+                    container1.style.transform = `translateX(${x}px)`;
+                    container2.style.transform = `translateX(${y}px)`;
+                } else {
+                    x -= 7
+                    y += 7
+                    container1.style.transform = `translateX(${x}px)`;
+                    container2.style.transform = `translateX(${y}px)`;
+                }
+            }
+
+            previousScrollPosition = scrollPosition;
+        });
+        
+        
+    
+
     </script>
 </body>
 </html>
