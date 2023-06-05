@@ -19,6 +19,11 @@
     <title>ElevenUp - Life Science and Healthcare Marketing</title>
 </head>
 <body>
+    <nav>
+        <div class="menu">
+
+        </div>
+    </nav>
     <main class="video-bg">
         <video src="/assets/videos/videobg.mp4" autoplay loop muted></video>
     </main>
@@ -57,6 +62,7 @@
     </section>
     <section class="clientes">
         <h2>Clientes</h2>
+        <div class="aqui"></div>
     </section>
     <section class="solucoes">
         <h2>Soluções</h2>
@@ -229,5 +235,21 @@
             <a class="copyright" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
         </div>
     </footer>
+
+    <script>
+        const nav = document.querySelector('nav')
+        const menu = document.createElement('div');
+
+        window.addEventListener('scroll', function() {
+            var element = document.querySelector('.menu');
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollPosition > 100) {
+                element.style.display = 'block'; // Exibe o elemento
+            } else {
+                element.style.display = 'none'; // Oculta o elemento
+            }
+        });
+    </script>
 </body>
 </html>
