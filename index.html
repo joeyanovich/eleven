@@ -20,8 +20,10 @@
 </head>
 <body>
     <nav>
-        <div class="menu">
-
+        <div class="naav">
+            <div>
+                <img src="./assets/logo.png" />
+            </div>
         </div>
     </nav>
     <main class="video-bg">
@@ -59,6 +61,19 @@
     </section>
     <section class="segmentos">
         <h2>Segmentos</h2>
+        <div class="container-segmentos">
+            <div class="left-segmentos">
+                <img id="img-frente" class="img-atras slide" src="./assets/healthcare.jpg">
+                <img id="img-atras" class="img-frente slide" src="./assets/lifescience.jpg">
+                <div class="container-btns">
+                    <button onclick="switchSlide()"><</button>
+                    <button onclick="switchSlide()">></button>
+                </div>
+            </div> 
+            <div class="right-segmentos">
+                
+            </div>
+        </div>
     </section>
     <section class="clientes">
         <h2>Clientes</h2>
@@ -278,6 +293,10 @@
         const nav = document.querySelector('nav')
         const container1 = document.querySelector('.container1-clientes')
         const container2 = document.querySelector('.container2-clientes')
+
+        const imagem1 = document.querySelector('#img-frente')
+        const imagem2 = document.querySelector('#img-atras')
+
         let previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
         let x = -130
@@ -285,13 +304,17 @@
 
     
         window.addEventListener('scroll', function() {
-            var element = document.querySelector('.menu');
+            var nav = document.querySelector('.naav');
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollPosition > 100) {
-                element.style.display = 'block'; // Exibe o elemento
+            if (scrollPosition > 0) {
+                nav.classList.remove('menu-desactive')
+                nav.classList.add('menu')
+                // element.style.display = 'block'; // Exibe o elemento
             } else {
-                element.style.display = 'none'; // Oculta o elemento
+                nav.classList.remove('menu')
+                nav.classList.add('menu-desactive')
+                // element.style.display = 'none'; // Oculta o elemento
             }
         });
 
@@ -315,10 +338,24 @@
 
             previousScrollPosition = scrollPosition;
         });
-        
-        
-    
 
+        var stateImage = false
+
+        function switchSlide() {
+        stateImage = !stateImage;
+
+        if (stateImage) {
+            imagem1.classList.remove('img-frente');
+            imagem1.classList.add('img-atras');
+            imagem2.classList.remove('img-atras');
+            imagem2.classList.add('img-frente');
+        } else {
+            imagem1.classList.remove('img-atras');
+            imagem1.classList.add('img-frente');
+            imagem2.classList.remove('img-frente');
+            imagem2.classList.add('img-atras');
+        }
+        }
     </script>
 </body>
 </html>
