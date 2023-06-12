@@ -20,12 +20,22 @@
 </head>
 <body>
     <nav>
-        <div class="naav">
+        <div class="naav menu-desactive">
             <div>
                 <img src="./assets/logo.png" />
             </div>
+            <div onclick="handleMenu()" class="right-nav">
+                <img class="i-menu" src="./assets/menu.png" />
+                <img class="dna" src="./assets/icons/menu-dna.svg" />
+            </div>
         </div>
     </nav>
+    <section class="menuu">
+        <div class="menu-container">
+            <img src="./assets/icons/close.png" onclick="handleMenu()">
+
+        </div>
+    </section>
     <main class="video-bg">
         <video src="/assets/videos/videobg.mp4" autoplay loop muted></video>
     </main>
@@ -322,7 +332,7 @@
         window.addEventListener('scroll', function() {
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-            if(scrollPosition >= 1200 && scrollPosition <= 2400){
+            if(scrollPosition >= 1200 && scrollPosition <= 2800){
                 if (scrollPosition > previousScrollPosition) {
                     x += 7
                     y -= 7
@@ -342,20 +352,35 @@
         var stateImage = false
 
         function switchSlide() {
-        stateImage = !stateImage;
+            stateImage = !stateImage;
 
-        if (stateImage) {
-            imagem1.classList.remove('img-frente');
-            imagem1.classList.add('img-atras');
-            imagem2.classList.remove('img-atras');
-            imagem2.classList.add('img-frente');
-        } else {
-            imagem1.classList.remove('img-atras');
-            imagem1.classList.add('img-frente');
-            imagem2.classList.remove('img-frente');
-            imagem2.classList.add('img-atras');
+            if (stateImage) {
+                imagem1.classList.remove('img-frente');
+                imagem1.classList.add('img-atras');
+                imagem2.classList.remove('img-atras');
+                imagem2.classList.add('img-frente');
+            } else {
+                imagem1.classList.remove('img-atras');
+                imagem1.classList.add('img-frente');
+                imagem2.classList.remove('img-frente');
+                imagem2.classList.add('img-atras');
+            }
         }
+
+        var menuOpenned = false
+        var menu = document.querySelector('.menuu')
+
+        function handleMenu() {
+            menuOpenned = !menuOpenned;
+
+            if(menuOpenned) {
+                menu.style.transform = `translateX(0)`
+            } else {
+                menu.style.transform = `translateX(100%)`
+            }
         }
+
+        
     </script>
 </body>
 </html>

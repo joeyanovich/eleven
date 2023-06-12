@@ -571,11 +571,104 @@ nav{
     width: 8rem;
 }
 
+.right-nav{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 100%;  
+    cursor: pointer; 
+    transition: all 500ms ease-in-out;
+    z-index: 10;
+}
+.right-nav:hover{
+    animation: bgDna 500ms ease-in-out;
+}
+.right-nav:hover{
+    transform: rotate(360deg); 
+}
+
+.right-nav .i-menu{
+    width: 35px;
+    height: 35px;
+}
+
+.right-nav .dna{
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+@keyframes bgDna {
+    0%{
+        width: 50px;
+        height: 50px;
+    }
+    50%{
+        width: 70px;
+        height: 70px;
+    }
+    100%{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@keyframes dna {
+    0%{
+        width: 10px;
+        height: 10px;
+    }
+    50%{
+        width: 50px;
+        height: 50px;
+    }
+    100%{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.right-nav:hover .i-menu{
+    display: none;
+}
+
+.right-nav:hover .dna{
+    display: block;
+    animation: dna 500ms ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
+.menuu{
+    position: fixed;
+    top:0;
+    transform: translateX(100%);
+    z-index: 10;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--white-150);   
+    transition: all 500ms ease-in-out;
+}
+
+.menu-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-container img{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 25px;
+    cursor: pointer;
+}
 
 .container-segmentos{
     width: 1440px;
     height:500px;
-
     display: flex;
 }
 
@@ -632,3 +725,4 @@ nav{
     height:auto;
     background-color: #410317;
 }
+
