@@ -33,7 +33,22 @@
     <section class="menuu">
         <div class="menu-container">
             <img src="./assets/icons/close.png" onclick="handleMenu()">
-
+            <div class="content-menu">
+                <ul>
+                    <li class="nav-home">
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">QUEM SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="">EQUIPE</a>
+                    </li>
+                    <li>
+                        <a href="">CONTATO</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <main class="video-bg">
@@ -81,7 +96,45 @@
                 </div>
             </div> 
             <div class="right-segmentos">
-                
+                <div class="container-seg">
+                    <div class="ls-seg seg-content">
+                        <h3>Life Science</h3>
+                        <p>
+                            Através de nosso conhecimento biológico, criamos uma estratégia
+                            personalizada para o seu negócio utilizando marketing e Life
+                            Science. Vamos proporcionar sua evolução potencializando seus
+                            resultados, aumentando sua presença digital e solucionando
+                            todos os seus problemas de marketing.
+                        </p>
+                        <h5 class="hcinco">Utilizamos Ciência e Inovação!</h5>
+                        <h5>Nossos Segmentos:</h5>
+                        <ul>
+                            <li>Representantes de materiais laboratoriais e médico-hospitalares.</li>
+                            <li>Prestadores de serviços de suporte e manutenção.</li>
+                            <li>Softwares relacionados à Biotech.</li>
+                            <li>Indústria de materiais laboratoriais e médico-hospitalares.</li>
+                        </ul>
+                    </div>
+                    <div class="hc-seg seg-content">
+                        <h3>Healthcare</h3>
+                        <p>
+                            Através de nosso conhecimento biológico, criamos uma estratégia
+                            personalizada para o seu negócio utilizando marketing e
+                            Healthcare. Vamos proporcionar sua evolução potencializando
+                            seus resultados, aumentando sua presença digital e solucionando
+                            todos os seus problemas de marketing.
+                        </p>
+                        <h5 class="hcinco">Utilizamos Ciência e Inovação!</h5>
+                        <h5>Nossos Segmentos:</h5>
+                        <ul>
+                            <li>Laboratórios de análise.</li>
+                            <li>Serviços especializados em saúde.</li>
+                            <li>Empresas de equipamentos especializados.</li>
+                            <li>Empresas de plano de saúde (clínicas populares).</li>
+                            <li>Clínicas de saúde.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -307,6 +360,9 @@
         const imagem1 = document.querySelector('#img-frente')
         const imagem2 = document.querySelector('#img-atras')
 
+        const ls = document.querySelector(".ls-seg")
+        const hc = document.querySelector(".hc-seg")
+
         let previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
         let x = -130
@@ -359,11 +415,15 @@
                 imagem1.classList.add('img-atras');
                 imagem2.classList.remove('img-atras');
                 imagem2.classList.add('img-frente');
+                ls.style.display = 'block'
+                hc.style.display = 'none'
             } else {
                 imagem1.classList.remove('img-atras');
                 imagem1.classList.add('img-frente');
                 imagem2.classList.remove('img-frente');
                 imagem2.classList.add('img-atras');
+                hc.style.display = 'block'
+                ls.style.display = 'none'
             }
         }
 
@@ -379,8 +439,8 @@
                 menu.style.transform = `translateX(100%)`
             }
         }
+                
 
-        
     </script>
 </body>
 </html>

@@ -1,0 +1,390 @@
+:root{
+    --blue-600: #025ead;
+    --blue-800: #003868;
+    --blue-900: #012f57;
+    --pink-50: rgba(255, 14, 209, 0.25);
+    --pink-500: #ff0ed1;
+    --pink-600: #C60CA2;
+    --pink-800: #610950;
+    --black-100: rgba(0, 0, 0, 0.4);
+    --black-200: #363636;
+    --black-900: #222222;
+    --gray-200: #ececec;
+    --gray-400: #C0C0C0;
+    --gray-800: #696969;
+    --white-50: rgba(255, 255, 255, 0.3);
+    --white-80: rgba(255, 255, 255, 0.5);
+    --white-90: rgba(255, 255, 255, 0.7);
+    --white-100: #ffffff;
+    --white-150: #fafafa;
+    --white-200: rgba(250, 250, 250, 0.5);
+    --gradient-radial: radial-gradient(circle, rgba(255,14,209,0.6) 5%, rgba(255,14,209,0.05)52%, rgba(250, 250, 250, 0.5) 90%)
+    --gradient-radial2: radial-gradient(circle, rgba(255,14,209,0.1) 5%, rgba(255,14,209,0.05)52%, rgba(250, 250, 250, 0.5) 90%)
+    --gradient-radial-blue: radial-gradient(circle, rgba(0,56,104,0.5) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250,0) 100%)
+    --gradient-radial-blue2: radial-gradient(circle, rgba(0,56,104,0.1) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250,0.5) 90%)
+    --gradient-radial-blue-mini: radial-gradient(circle, rgba(0,56,104,0.1) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250, 0.008) 70%)
+    --white-gradient: linear-gradient(138deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15449929971988796) 64%, rgba(250,250,250,1) 100%)
+    --black-gradient: linear-gradient(138deg, #222222 50%, #363636 90%, #4F4F4F 100% )
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: var(--gray-200);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+.equipe-title{
+    margin-top: 10rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+    text-align: center;
+}
+.equipe-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+}
+.card-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    width: 280px;
+    height: 280px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-photo img{
+    width: 100%;
+    object-fit: cover;
+    
+    transition: 500ms all ease;
+}
+.card-text{
+    text-align: center;
+}
+.card-text .name-equipe{
+    margin-top: 0.5rem;
+    font-size: 24px;
+    
+}
+.card-text .function-equipe{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: -0.25rem;
+    margin-bottom: 0.5rem;
+}
+.card-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.card-social img{
+    width: 1.5rem;
+}
+.card-card:hover{
+    overflow: visible;
+}
+.card-content{
+    display: none;
+}
+.card-card:hover .card-photo img{
+    width: 194px;
+    margin-top: -1.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+}
+.card-card:hover .card-content{
+    display: block;
+}
+
+
+
+
+footer{
+    display: flex;
+    position: relative;
+    margin-top: 7rem;
+    min-height: 900px;
+    width: 100%;
+    background-image: url("../assets/img-footer/fundo.png");
+}
+/* QUADRADO 1 ROSA ESQUERDA */
+.left-pink-container{
+    position: absolute;
+    animation: left-pink 10s ease-in-out infinite;
+}
+.ret-left-pink{
+    position: absolute;
+    top: -3rem;
+    left: -5rem;
+    filter: blur(4px);
+    width: 12rem;
+    height: 12rem;
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes left-pink {
+    0%{
+        top: 0px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0px;
+    }
+  }
+  /* QUADRADO AZUL ESQUERDA */
+.left-blue-container{
+    position: absolute;
+    animation: left-blue 5s ease-in-out infinite;
+}
+.ret-left-blue{
+    position: absolute;
+    width: 20rem;
+    height: 16rem;
+    top: 4rem;
+    left: -7rem;
+    filter: blur(4px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes left-blue {
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: 0;
+    }
+}
+/* QUADRADO 2 ROSA ESQUERDA */
+.left-pink2-container{
+    position: absolute;
+    animation: left-pink2 8s ease-in-out infinite;
+}
+.ret-left-pink2{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: 6rem;
+    left: 24rem;
+    filter: blur(16px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes left-pink2 {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO AZUL CENTRAL */
+.center-blue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: center-blue 3s ease-in-out infinite;
+    width: 100%;
+}
+.center-center{
+    position: absolute;
+    width: 24rem;
+    height: 14rem;
+    top: -3rem;
+    filter: blur(4px);
+    transform: rotate(-24deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes center-blue {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO ROSA DIREITA */
+.right-pink-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: right-pink 6s ease-in-out infinite;
+    width: 100%;
+}
+.ret-right-pink{
+    position: absolute;
+    width: 8rem;
+    height: 6rem;
+    top: -2.5rem;
+    right: 24rem;
+    filter: blur(12px);
+    transform: rotate(25deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--pink-500), var(--pink-800));
+}
+@keyframes right-pink {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 20px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* QUADRADO AZUL DIREITA */
+.right-blue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: center-blue 10s ease-in-out infinite;
+    width: 100%;
+}
+.ret-right-blue{
+    position: absolute;
+    width: 16rem;
+    height: 15rem;
+    right: -6rem;
+    filter: blur(4px);
+    transform: rotate(-60deg);
+    border-radius: 1.5rem;
+    background-image: linear-gradient(var(--blue-600), var(--blue-900));
+}
+@keyframes center-blue {
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+/* FILTRO COM OPACIDADE DE BG */
+.footer-bg-op{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/img-footer/fundo-opacidade.png");
+    filter: blur(4px);
+}
+footer .bg-img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    object-fit: cover;
+}
+.bg-balls{
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-image: url("../assets/img-footer/fundo-footer.png");
+}
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    z-index: 2;
+}
+.logo-footer{
+    height: 100px;
+    width: 300px;
+    object-fit: contain; 
+}
+.logo-footer img{
+    width: 300px;
+}
+.content-footer{
+    margin-top: 6rem;
+    display: flex;
+    gap: 80px;
+}
+.content-footer h2{
+    margin-bottom: 0.75rem;
+    font-size: 1.875rem;
+}
+.content-footer a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--black-900);
+}
+.container-redes-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container-redes-sociais img{
+    display: flex;
+    position: block;
+    width: 48px;
+}
+hr{
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    width: 67%;
+    height: 2px;
+    border: none;
+    background-color: var(--pink-500);
+}
+.up-copyright{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.copyright{
+    text-decoration: none;
+    color: var(--black-900);
+    font-size: 14px;
+}
