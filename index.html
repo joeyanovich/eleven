@@ -24,10 +24,24 @@
             <div>
                 <img src="./assets/logo.png" />
             </div>
-            <div onclick="handleMenu()" class="right-nav">
-                <img class="i-menu" src="./assets/menu.png" />
-                <img class="dna" src="./assets/icons/menu-dna.svg" />
+
+            <div class="container-right-menu">
+                <button onclick="changeLanguage('pt')">
+                    Change to pt
+                    </button>
+                  <button onclick="changeLanguage('es')">
+                    Change to es
+                  </button>
+                  <button onclick="changeLanguage('en')">
+                    Change to en
+                  </button>
+
+                <div onclick="handleMenu()" class="right-nav">
+                    <img class="i-menu" src="./assets/menu.png" />
+                    <img class="dna" src="./assets/icons/menu-dna.svg" />
+                </div>
             </div>
+            
         </div>
     </nav>
     <section class="menuu">
@@ -36,16 +50,16 @@
             <div class="content-menu">
                 <ul>
                     <li class="nav-home">
-                        <a href="">HOME</a>
+                        <a href="./index.html">HOME</a>
                     </li>
                     <li>
-                        <a href="">QUEM SOMOS</a>
+                        <a href="./pages/quem-somos.html">QUEM SOMOS</a>
                     </li>
                     <li>
-                        <a href="">EQUIPE</a>
+                        <a href="./pages/equipe.html">EQUIPE</a>
                     </li>
                     <li>
-                        <a href="">CONTATO</a>
+                        <a href="./pages/contato.html">CONTATO</a>
                     </li>
                 </ul>
             </div>
@@ -140,7 +154,10 @@
     </section>
     <section class="clientes">
         <h2>Clientes</h2>
-        
+            <br />
+            <br />
+            <br />
+            <br />
         <div class="container1-clientes">
                 <img src="./assets/clients-logo/apoiolab-color.png">
                 <img src="./assets/clients-logo/atlantis-color.png">
@@ -384,19 +401,18 @@
             }
         });
 
-        
         window.addEventListener('scroll', function() {
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-            if(scrollPosition >= 1200 && scrollPosition <= 2800){
+            if(scrollPosition >= 2000 && scrollPosition <= 3200){
                 if (scrollPosition > previousScrollPosition) {
-                    x += 7
-                    y -= 7
+                    x += 2.5
+                    y -= 2.5
                     container1.style.transform = `translateX(${x}px)`;
                     container2.style.transform = `translateX(${y}px)`;
                 } else {
-                    x -= 7
-                    y += 7
+                    x -= 2.5
+                    y += 2.5
                     container1.style.transform = `translateX(${x}px)`;
                     container2.style.transform = `translateX(${y}px)`;
                 }
@@ -440,7 +456,52 @@
             }
         }
                 
-
+        function changeLanguage(lang) {
+            location.hash = lang;
+            location.reload();
+        }
     </script>
+
+    <script type="module">
+        import {en} from './translations/en-us.js'
+        import {es} from './translations/es.js'
+        import {pt} from './translations/pt-br.js'
+        
+        // Define the language reload anchors
+        var language = {
+                pt: {
+                    pt
+                },
+                es: {
+                    es
+                },
+                en: {
+                    en
+                },
+            };
+
+        var langElements = document.querySelectorAll('.lang')
+
+        if (window.location.hash) {
+            if (window.location.hash == "#pt") {
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.pt.pt.translation[key]
+                })
+            } else if (window.location.hash == "#en") {
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.en.en.translation[key]
+                })
+            } else if (window.location.hash == "#es"){
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.es.es.translation[key]
+                })
+            }
+        }
+    </script>
+
+    
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="color: green">
+        GeeksforGeeks
+      </h1>
+        
+      <p>
+        Click on the buttons below to change
+        the language of the webpage.
+      </p>
+      
+      <!-- Define the buttons that will 
+      change the language of the page 
+      and reload it -->
+      <button onclick="changeLanguage('pt')">
+        Change to pt
+        </button>
+      <button onclick="changeLanguage('es')">
+        Change to es
+      </button>
+      <button onclick="changeLanguage('en')">
+        Change to en
+      </button>
+      
+      <!-- Define the content of the page
+      that would be changed -->
+      <p class="lang" key="Compromissos">
+        Compromissos
+      </p>
+      <p class="lang" key="Profissionalismo">
+        Profissionalismo
+      </p>
+      <p class="lang" key="Pontualidade">
+        Pontualidade
+      </p>
+    
+
+    <script>
+        // Create a function to change the hash 
+        // value of the page and reload it
+        function changeLanguage(lang) {
+            location.hash = lang;
+            location.reload();
+        }
+    </script> 
+     
+    <script type="module">
+        import {en} from './translations/en-us.js'
+        import {es} from './translations/es.js'
+        import {pt} from './translations/pt-br.js'
+        
+        
+        
+        // Define the language reload anchors
+        var language = {
+                pt: {
+                    pt
+                },
+                es: {
+                    es
+                },
+                en: {
+                    en
+                },
+            };
+
+        var langElements = document.querySelectorAll('.lang')
+
+        if (window.location.hash) {
+            if (window.location.hash == "#pt") {
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.pt.pt.translation[key]
+                })
+            } else if (window.location.hash == "#en") {
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.en.en.translation[key]
+                })
+            } else if (window.location.hash == "#es"){
+                langElements.forEach(function (element){
+                    var key = element.getAttribute('key')
+                    element.textContent = language.es.es.translation[key]
+                })
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
