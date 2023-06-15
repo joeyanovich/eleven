@@ -193,6 +193,12 @@ nav{
 .content-menu li:hover{
     font-size: 90px;
 }
+
+.content-menu span{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .video-bg{
     height: 100vh;
     width: 100vw;

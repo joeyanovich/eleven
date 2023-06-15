@@ -12,26 +12,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/quem-somos.css">
-    
+    <link rel="stylesheet" href="../css/index.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script>
+
+        function handleHome(){
+            window.location.href = `/index.html${location.hash}`
+        }
+        
+        function handleQuemSomos(){
+            window.location.href = `quem-somos.html${location.hash}`
+        }
+        
+        function handleEquipe(){
+            window.location.href = `equipe.html${location.hash}`
+        }
+        
+        function handleContato(){
+            window.location.href = `contato.html${location.hash}`
+        }
+
+    </script>
 
     <title>ElevenUp - Life Science and Healthcare Marketing</title>
 </head>
 <body>
+    <nav>
+        <div class="naav menu-desactive">
+            <div>
+                <img src="../assets/logo.png" />
+            </div>
+
+            <div class="container-right-menu">
+                <button onclick="changeLanguage('pt')">
+                    Change to pt
+                    </button>
+                  <button onclick="changeLanguage('es')">
+                    Change to es
+                  </button>
+                  <button onclick="changeLanguage('en')">
+                    Change to en
+                  </button>
+
+                <div onclick="handleMenu()" class="right-nav">
+                    <img class="i-menu" src="../assets/menu.png" />
+                    <img class="dna" src="../assets/icons/menu-dna.svg" />
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="menuu">
+        <div class="menu-container">
+            <img src="../assets/icons/close.png" onclick="handleMenu()">
+            <div class="content-menu">
+                <ul>
+                    <li class="nav-home">
+                        <span onclick="handleHome()">HOME</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="QuemSomos" onclick="handleQuemSomos()">QUEM SOMOS</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Equipe" onclick="handleEquipe()">EQUIPE</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Contato" onclick="handleContato()">CONTATO</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <main class="head-quem-somos">
-        <h1>Quem Somos</h1>
+        <h1 class="lang" key="QuemSomos">Quem Somos</h1>
         <div class="content-container">
             <img class="img-quem-somos" src="../assets/quem-somos.jpg" alt="">
             <div class="content-quem-somos">
-                <p>
+                <p class="lang" key="QuemSomosText">
                     A ElevenUp – Life Science and Healthcare Marketing – nasceu em
                     2019 com a proposta de realizar um trabalho de marketing voltado
                     para empresas de saúde humana e animal, além de atender
                     startups de biotecnologia.
-                </p>
-                <br>
-                <p>
                     Percebemos que ao mesmo tempo que existiam diversas agências
                     de publicidade no mercado, existiam muito poucas capazes de
                     fornecer uma assessoria completa na área de marketing (4ps –
@@ -47,14 +111,14 @@
     </main>
     <section class="nosso-time">
         <div class="nt-title">
-            <h2>
+            <h2 class="lang" key="NossoTimeTem">
                 Nosso time contém especialistas em:
             </h2>
         </div>
         <div class="nt-section">
             <div class="mini-section">
                 <img src="../assets/quem-somos-imagens/copy.svg" alt="">
-                <p>
+                <p >
                     Copywriters
                 </p>
             </div>
@@ -66,31 +130,31 @@
             </div>
             <div class="mini-section">
                 <img src="../assets/quem-somos-imagens/manager.svg" alt="">
-                <p>
+                <p class="lang" key="TrafegoEmCanais">
                     Tráfego em canais digitais e inteligência de mercado
                 </p>
             </div>
             <div class="mini-section">
                 <img src="../assets/quem-somos-imagens/webDev.svg" alt="">
-                <p>
+                <p class="lang" key="DesenvolvedoresWeb">
                     Desenvolvedores Web
                 </p>
             </div>
         </div>
         <div class="text-nosso-time">
-            <p>
+            <p class="lang" key="AlemDe">
                 Além de Biomédicos e Biólogos com mestrado e doutorado <br>
                 e Engenheiros de Bioprocessos, formados nas mais renomadas universidades do país.
             </p>
         </div>
     </section>
     <section class="cta">
-        <p>
+        <p class="lang" key="VenhaPara">
             Venha para a ElevenUp e evolua para o mundo digital!
         </p>
     </section>
     <section class="text-section">
-        <p>
+        <p class="lang" key="Assim">
             Assim, ao se unir a ElevenUp você estará junto a profissionais que entendem do seu negócio e
             utilizam as melhores ferramentas para desenvolver sua empresa, fazer você se relacionar com seu
             cliente e vender mais!
@@ -124,14 +188,14 @@
             <div class="ret-right-blue"></div>
         </div>
         <!-- <div class="bg-balls"></div> -->
-        <img class="bg-img" src="../assets/img-footer/fundo-footer.png" alt="">
+        <img class="bg-img" src="./assets/img-footer/fundo-footer.png" alt="">
         <div class="container-footer">
             <div class="logo-footer">
-                <img src="../assets/logo.png" alt="">
+                <img src="./assets/logo.png" alt="">
             </div>
             <div class="content-footer">
                 <div class="unidade">
-                    <h2>Nossa Unidade</h2>
+                    <h2 class="lang" key="NossaUnidade">Nossa Unidade</h2>
                     <a href="https://goo.gl/maps/e1Xxc5AXoCHpo9Bg6" target="_blank">
                         Rua Reverendo Francisco <br />
                         Lotufo, 663 - Sala 6 <br />
@@ -140,18 +204,18 @@
                     </a>
                 </div>
                 <div class="institucional">
-                    <h2>Institucional</h2>
-                    <a href="#">Quem Somos</a><br>
-                    <a href="#">Equipe</a><br>
-                    <a href="#">Contato</a>
+                    <h2 class="lang" key="Institucional">Institucional</h2>
+                    <a class="lang" key="QuemSomos" href="#">Quem Somos</a><br>
+                    <a class="lang" key="Equipe" href="#">Equipe</a><br>
+                    <a class="lang" key="Contato" href="#">Contato</a>
                 </div>
                 <div class="contato">
-                    <h2>Contato</h2>
+                    <h2 class="lang" key="Contato">Contato</h2>
                         <a href="tel:+551433548256">(14) 3354-8256</a> <br>
                         <a href="mailto:contato@elevenup.com.br">contato@elevenup.com.br</a>
                 </div>
                 <div class="social">
-                    <h2>Redes Sociais</h2>
+                    <h2 class="lang" key="RedesSociais">Redes Sociais</h2>
                     <div class="container-redes-sociais">
                         <a href="">
                             <img src="../assets/icons/redes-sociais/face.png" alt="">
@@ -166,9 +230,13 @@
                 </div>
             </div>
             <hr />
-            <p class="up-copyright">Desenvolvido com muito <span style="color: red">♥ </span> por <span style="color: #012f57; font-weight: bold;">Eleven</span></p>
-            <a class="copyright" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
+            <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven</p>
+            <a class="lang copyright" key="TodosDireitos" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
         </div>
     </footer>
+
+    <script type="module" src="./js/translate.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 </html>

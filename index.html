@@ -16,13 +16,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+    <script>
+
+        function handleHome(){
+            window.location.href = `/index.html${location.hash}`
+        }
+        
+        function handleQuemSomos(){
+            window.location.href = `pages/quem-somos.html${location.hash}`
+        }
+        
+        function handleEquipe(){
+            window.location.href = `pages/equipe.html${location.hash}`
+        }
+        
+        function handleContato(){
+            window.location.href = `pages/contato.html${location.hash}`
+        }
+
+    </script>
+
     <title>ElevenUp - Life Science and Healthcare Marketing</title>
 </head>
 <body>
     <nav>
         <div class="naav menu-desactive">
             <div>
-                <img src="./assets/logo.png" />
+                <img src="../assets/logo.png" />
             </div>
 
             <div class="container-right-menu">
@@ -37,8 +57,8 @@
                   </button>
 
                 <div onclick="handleMenu()" class="right-nav">
-                    <img class="i-menu" src="./assets/menu.png" />
-                    <img class="dna" src="./assets/icons/menu-dna.svg" />
+                    <img class="i-menu" src="../assets/menu.png" />
+                    <img class="dna" src="../assets/icons/menu-dna.svg" />
                 </div>
             </div>
             
@@ -46,20 +66,20 @@
     </nav>
     <section class="menuu">
         <div class="menu-container">
-            <img src="./assets/icons/close.png" onclick="handleMenu()">
+            <img src="../assets/icons/close.png" onclick="handleMenu()">
             <div class="content-menu">
                 <ul>
                     <li class="nav-home">
-                        <a href="./index.html">HOME</a>
+                        <span onclick="handleHome()">HOME</span>
                     </li>
                     <li>
-                        <a href="./pages/quem-somos.html">QUEM SOMOS</a>
+                        <span class="lang" key="QuemSomos" onclick="handleQuemSomos()">QUEM SOMOS</span>
                     </li>
                     <li>
-                        <a href="./pages/equipe.html">EQUIPE</a>
+                        <span class="lang" key="Equipe" onclick="handleEquipe()">EQUIPE</span>
                     </li>
                     <li>
-                        <a href="./pages/contato.html">CONTATO</a>
+                        <span class="lang" key="Contato" onclick="handleContato()">CONTATO</span>
                     </li>
                 </ul>
             </div>
@@ -70,8 +90,8 @@
     </main>
     <section class="compromissos">
         <div class="comp-left">
-            <h2>COMPROMISSOS</h2>
-            <p>
+            <h2 class="lang" key="Compromissos">COMPROMISSOS</h2>
+            <p class="lang" key="CompromissosText">
                 Nosso time contém especialistas em design, tráfego
                 em canais digitais e inteligência de mercado, além de
                 Biomédicos e Biólogos com mestrado e doutorado e
@@ -82,24 +102,24 @@
         <div class="comp-right">
             <div class="quad">
                 <img src="/assets/circles/circulo-1.png" alt="">
-                <span>Profissionalismo</span>
+                <span class="lang" key="Profissionalismo">Profissionalismo</span>
             </div>
             <div class="quad">
                 <img src="/assets/circles/circulo-2.png" alt="">
-                <span>Pontualidade</span>
+                <span class="lang" key="Pontualidade">Pontualidade</span>
             </div>
             <div class="quad">
                 <img src="/assets/circles/circulo-3.png" alt="">
-                <span>Relatório <br> Gerenciais</span>
+                <span class="lang" key="RelatoriosGerenciais">Relatório <br> Gerenciais</span>
             </div>
             <div class="quad">
                 <img src="/assets/circles/circulo-4.png" alt="">
-                <span>Entrega de <br> Resultados</span>
+                <span class="lang" key="EntregaDeResultados">Entrega de <br> Resultados</span>
             </div>
         </div>
     </section>
     <section class="segmentos">
-        <h2>Segmentos</h2>
+        <h2 class="lang" key="Segmentos">Segmentos</h2>
         <div class="container-segmentos">
             <div class="left-segmentos">
                 <img id="img-frente" class="img-atras slide" src="./assets/healthcare.jpg">
@@ -113,39 +133,39 @@
                 <div class="container-seg">
                     <div class="ls-seg seg-content">
                         <h3>Life Science</h3>
-                        <p>
+                        <p class="lang" key="LifescienceText">
                             Através de nosso conhecimento biológico, criamos uma estratégia
                             personalizada para o seu negócio utilizando marketing e Life
                             Science. Vamos proporcionar sua evolução potencializando seus
                             resultados, aumentando sua presença digital e solucionando
                             todos os seus problemas de marketing.
                         </p>
-                        <h5 class="hcinco">Utilizamos Ciência e Inovação!</h5>
-                        <h5>Nossos Segmentos:</h5>
+                        <h5 class="lang hcinco" key="UtilizamosCiencia">Utilizamos Ciência e Inovação!</h5>
+                        <h5 class="lang" key="NossosSegmentos">Nossos Segmentos:</h5>
                         <ul>
-                            <li>Representantes de materiais laboratoriais e médico-hospitalares.</li>
-                            <li>Prestadores de serviços de suporte e manutenção.</li>
-                            <li>Softwares relacionados à Biotech.</li>
-                            <li>Indústria de materiais laboratoriais e médico-hospitalares.</li>
+                            <li class="lang" key="RepresentantesDeMateriais">Representantes de materiais laboratoriais e médico-hospitalares.</li>
+                            <li class="lang" key="PrestadoresDeServicos">Prestadores de serviços de suporte e manutenção.</li>
+                            <li class="lang" key="SoftwareRelacionados">Softwares relacionados à Biotech.</li>
+                            <li class="lang" key="IndustriaDeMateriais">Indústria de materiais laboratoriais e médico-hospitalares.</li>
                         </ul>
                     </div>
                     <div class="hc-seg seg-content">
-                        <h3>Healthcare</h3>
-                        <p>
+                        <h3 >Healthcare</h3>
+                        <p class="lang" key="HealthcareText">
                             Através de nosso conhecimento biológico, criamos uma estratégia
                             personalizada para o seu negócio utilizando marketing e
                             Healthcare. Vamos proporcionar sua evolução potencializando
                             seus resultados, aumentando sua presença digital e solucionando
                             todos os seus problemas de marketing.
                         </p>
-                        <h5 class="hcinco">Utilizamos Ciência e Inovação!</h5>
-                        <h5>Nossos Segmentos:</h5>
+                        <h5 class="lang hcinco" key="UtilizamosCiencia">Utilizamos Ciência e Inovação!</h5>
+                        <h5 class="lang" key="NossosSegmentos">Nossos Segmentos:</h5>
                         <ul>
-                            <li>Laboratórios de análise.</li>
-                            <li>Serviços especializados em saúde.</li>
-                            <li>Empresas de equipamentos especializados.</li>
-                            <li>Empresas de plano de saúde (clínicas populares).</li>
-                            <li>Clínicas de saúde.</li>
+                            <li class="lang" key="LaboratoriosDeAnalise">Laboratórios de análise.</li>
+                            <li class="lang" key="ServicosEspecializados">Serviços especializados em saúde.</li>
+                            <li class="lang" key="EmpresasDeEquipamentos">Empresas de equipamentos especializados.</li>
+                            <li class="lang" key="EmpresasDePlano">Empresas de plano de saúde (clínicas populares).</li>
+                            <li class="lang" key="ClínicasDeSaúde">Clínicas de saúde.</li>
                         </ul>
                     </div>
                 </div>
@@ -153,7 +173,7 @@
         </div>
     </section>
     <section class="clientes">
-        <h2>Clientes</h2>
+        <h2 class="lang" key="Clientes">Clientes</h2>
             <br />
             <br />
             <br />
@@ -198,8 +218,8 @@
         </div>
     </section>
     <section class="solucoes">
-        <h2>Soluções</h2>
-        <p>
+        <h2 class="lang" key="Solucoes">Soluções</h2>
+        <p class="lang" key="SolutionText">
             A ElevenUp tem como objetivo proporcionar os melhores resultados
             para a sua empresa de Life Science e Healthcare. Pensando nisso, nós
             oferecemos as melhores soluções para evoluir seu negócio e elevar
@@ -211,53 +231,53 @@
                     <img src="/assets/icons/icons-solucoes/rosas/rosa1.svg" alt="" class="solucoes-bg-icon">
                     <img src="/assets/icons/icons-solucoes/inbound.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Inbound Marketing</span>
+                <span class="lang" key="InboundMarketing">Inbound Marketing</span>
             </div>
             <div class="cards">
                 <div class="img-card">
                     <img src="/assets/icons/icons-solucoes/rosas/rosa4.svg" alt="" class="solucoes-bg-icon">
                 <img src="/assets/icons/icons-solucoes/desenvolvimento.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Desenvolvimento <br> WEB</span>
+                <span class="lang" key="DesenvolvimentoWeb">Desenvolvimento <br> WEB</span>
             </div>
             <div class="cards">
                 <div class="img-card">
                     <img src="/assets/icons/icons-solucoes/rosas/rosa3.svg" alt="" class="solucoes-bg-icon">
                     <img src="/assets/icons/icons-solucoes/geracao.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Gestão de Redes <br> Sociais</span>
+                <span class="lang" key="GestaoDeRedes">Gestão de Redes <br> Sociais</span>
             </div>
             <div class="cards">
                 <div class="img-card">
                     <img src="/assets/icons/icons-solucoes/rosas/rosa2.svg" alt="" class="solucoes-bg-icon">
                     <img src="/assets/icons/icons-solucoes/consultoria.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Consultoria em <br> Inteligência de <br> Mercado</span>
+                <span class="lang" key="ConsultoriaEmInteligencia">Consultoria em <br> Inteligência de <br> Mercado</span>
             </div>
             <div class="cards">
                 <div class="img-card">
                     <img src="/assets/icons/icons-solucoes/rosas/rosa5.svg" alt="" class="solucoes-bg-icon">
                     <img src="/assets/icons/icons-solucoes/geracao.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Geração de Leads <br> Qualificados</span>
+                <span class="lang" key="GeracaoDeLeads">Geração de Leads <br> Qualificados</span>
             </div>
             <div class="cards">
                 <div class="img-card">
                     <img src="/assets/icons/icons-solucoes/rosas/rosa6.svg" alt="" class="solucoes-bg-icon">
                 <img src="/assets/icons/icons-solucoes/criacao.svg" alt="" class="solucoes-icon">
                 </div>
-                <span>Criação de Conteúdo</span>
+                <span class="lang" key="CriacaoDeConteudo">Criação de Conteúdo</span>
             </div>
         </div>
     </section>
     <section class="combinacao">
-        <h2>A Combinação Perfeita</h2>
-        <p class="comb-p">
+        <h2 class="lang" key="CombinacaoPerfeita">A Combinação Perfeita</h2>
+        <p class="lang comb-p" key="CombinacaoPerfeitaText">
             Ao se unir a ElevenUp você estará junto a profissionais que entendem do seu negócio e
             utilizam as melhores ferramentas para desenvolver sua empresa, fazer você se
             relacionar com seu cliente e vender mais!
         </p>
-        <h3>Qual o segmento da sua empresa?</h3>
+        <h3 class="lang" key="QualOSegmento">Qual o segmento da sua empresa?</h3>
         <div class="cotainer-segmento">
             <div class="seg-img">
                 <div class="img-left">
@@ -272,24 +292,24 @@
                     <h4>
                         Life Science
                     </h4>
-                    <p>
-                        – Representantes de materiais laboratoriais e médico-hospitalares. <br>
-                        – Prestadores de serviços de suporte e manutenção. <br>
-                        – Softwares relacionados à Biotech. <br>
-                        – Indústria de materiais laboratoriais e médico-hospitalares. <br>
-                    </p>
+                    <ul>
+                        <li class="lang" key="RepresentantesDeMateriais">Representantes de materiais laboratoriais e médico-hospitalares.</li>
+                        <li class="lang" key="PrestadoresDeServicos">Prestadores de serviços de suporte e manutenção.</li>
+                        <li class="lang" key="SoftwareRelacionados">Softwares relacionados à Biotech.</li>
+                        <li class="lang" key="IndustriaDeMateriais">Indústria de materiais laboratoriais e médico-hospitalares.</li>
+                    </ul>
                 </div>
                 <div class="text-down">
                     <h4>
                         Healthcare
                     </h4>
-                    <p>
-                        – Laboratórios de análise. <br>
-                        – Serviços especializados em saúde. <br>
-                        – Empresas de equipamentos especializados. <br>
-                        – Empresas de plano de saúde (clínicas populares). <br>
-                        – Clínicas de saúde. 
-                    </p>
+                    <ul>
+                        <li class="lang" key="LaboratoriosDeAnalise">Laboratórios de análise.</li>
+                        <li class="lang" key="ServicosEspecializados">Serviços especializados em saúde.</li>
+                        <li class="lang" key="EmpresasDeEquipamentos">Empresas de equipamentos especializados.</li>
+                        <li class="lang" key="EmpresasDePlano">Empresas de plano de saúde (clínicas populares).</li>
+                        <li class="lang" key="ClínicasDeSaúde">Clínicas de saúde.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -329,7 +349,7 @@
             </div>
             <div class="content-footer">
                 <div class="unidade">
-                    <h2>Nossa Unidade</h2>
+                    <h2 class="lang" key="NossaUnidade">Nossa Unidade</h2>
                     <a href="https://goo.gl/maps/e1Xxc5AXoCHpo9Bg6" target="_blank">
                         Rua Reverendo Francisco <br />
                         Lotufo, 663 - Sala 6 <br />
@@ -338,18 +358,18 @@
                     </a>
                 </div>
                 <div class="institucional">
-                    <h2>Institucional</h2>
-                    <a href="#">Quem Somos</a><br>
-                    <a href="#">Equipe</a><br>
-                    <a href="#">Contato</a>
+                    <h2 class="lang" key="Institucional">Institucional</h2>
+                    <a class="lang" key="QuemSomos" href="#">Quem Somos</a><br>
+                    <a class="lang" key="Equipe" href="#">Equipe</a><br>
+                    <a class="lang" key="Contato" href="#">Contato</a>
                 </div>
                 <div class="contato">
-                    <h2>Contato</h2>
+                    <h2 class="lang" key="Contato">Contato</h2>
                         <a href="tel:+551433548256">(14) 3354-8256</a> <br>
                         <a href="mailto:contato@elevenup.com.br">contato@elevenup.com.br</a>
                 </div>
                 <div class="social">
-                    <h2>Redes Sociais</h2>
+                    <h2 class="lang" key="RedesSociais">Redes Sociais</h2>
                     <div class="container-redes-sociais">
                         <a href="">
                             <img src="./assets/icons/redes-sociais/face.png" alt="">
@@ -364,144 +384,12 @@
                 </div>
             </div>
             <hr />
-            <p class="up-copyright">Desenvolvido com muito <span style="color: red">♥ </span> por <span style="color: #012f57; font-weight: bold;">Eleven</span></p>
-            <a class="copyright" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
+            <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven</p>
+            <a class="lang copyright" key="TodosDireitos" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
         </div>
     </footer>
 
-    <script>
-        const nav = document.querySelector('nav')
-        const container1 = document.querySelector('.container1-clientes')
-        const container2 = document.querySelector('.container2-clientes')
-
-        const imagem1 = document.querySelector('#img-frente')
-        const imagem2 = document.querySelector('#img-atras')
-
-        const ls = document.querySelector(".ls-seg")
-        const hc = document.querySelector(".hc-seg")
-
-        let previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-        let x = -130
-        let y = 100
-
-    
-        window.addEventListener('scroll', function() {
-            var nav = document.querySelector('.naav');
-            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollPosition > 0) {
-                nav.classList.remove('menu-desactive')
-                nav.classList.add('menu')
-                // element.style.display = 'block'; // Exibe o elemento
-            } else {
-                nav.classList.remove('menu')
-                nav.classList.add('menu-desactive')
-                // element.style.display = 'none'; // Oculta o elemento
-            }
-        });
-
-        window.addEventListener('scroll', function() {
-            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            if(scrollPosition >= 2000 && scrollPosition <= 3200){
-                if (scrollPosition > previousScrollPosition) {
-                    x += 2.5
-                    y -= 2.5
-                    container1.style.transform = `translateX(${x}px)`;
-                    container2.style.transform = `translateX(${y}px)`;
-                } else {
-                    x -= 2.5
-                    y += 2.5
-                    container1.style.transform = `translateX(${x}px)`;
-                    container2.style.transform = `translateX(${y}px)`;
-                }
-            }
-
-            previousScrollPosition = scrollPosition;
-        });
-
-        var stateImage = false
-
-        function switchSlide() {
-            stateImage = !stateImage;
-
-            if (stateImage) {
-                imagem1.classList.remove('img-frente');
-                imagem1.classList.add('img-atras');
-                imagem2.classList.remove('img-atras');
-                imagem2.classList.add('img-frente');
-                ls.style.display = 'block'
-                hc.style.display = 'none'
-            } else {
-                imagem1.classList.remove('img-atras');
-                imagem1.classList.add('img-frente');
-                imagem2.classList.remove('img-frente');
-                imagem2.classList.add('img-atras');
-                hc.style.display = 'block'
-                ls.style.display = 'none'
-            }
-        }
-
-        var menuOpenned = false
-        var menu = document.querySelector('.menuu')
-
-        function handleMenu() {
-            menuOpenned = !menuOpenned;
-
-            if(menuOpenned) {
-                menu.style.transform = `translateX(0)`
-            } else {
-                menu.style.transform = `translateX(100%)`
-            }
-        }
-                
-        function changeLanguage(lang) {
-            location.hash = lang;
-            location.reload();
-        }
-    </script>
-
-    <script type="module">
-        import {en} from './translations/en-us.js'
-        import {es} from './translations/es.js'
-        import {pt} from './translations/pt-br.js'
-        
-        // Define the language reload anchors
-        var language = {
-                pt: {
-                    pt
-                },
-                es: {
-                    es
-                },
-                en: {
-                    en
-                },
-            };
-
-        var langElements = document.querySelectorAll('.lang')
-
-        if (window.location.hash) {
-            if (window.location.hash == "#pt") {
-                langElements.forEach(function (element){
-                    var key = element.getAttribute('key')
-                    element.textContent = language.pt.pt.translation[key]
-                })
-            } else if (window.location.hash == "#en") {
-                langElements.forEach(function (element){
-                    var key = element.getAttribute('key')
-                    element.textContent = language.en.en.translation[key]
-                })
-            } else if (window.location.hash == "#es"){
-                langElements.forEach(function (element){
-                    var key = element.getAttribute('key')
-                    element.textContent = language.es.es.translation[key]
-                })
-            }
-        }
-    </script>
-
-    
+    <script src="../js/script.js"></script>
+    <script type="module" src="../js/translate.js"></script>
 </body>
 </html>

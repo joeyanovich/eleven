@@ -12,13 +12,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/contato.css">
+    <link rel="stylesheet" href="../css/index.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script>
 
+        function handleHome(){
+            window.location.href = `/index.html${location.hash}`
+        }
+
+        function handleQuemSomos(){
+            window.location.href = `quem-somos.html${location.hash}`
+        }
+        
+        function handleEquipe(){
+            window.location.href = `equipe.html${location.hash}`
+        }
+        
+        function handleContato(){
+            window.location.href = `contato.html${location.hash}`
+        }
+
+    </script>
     <title>ElevenUp - Life Science and Healthcare Marketing</title>
 </head>
 <body>
+    <nav>
+        <div class="naav menu-desactive">
+            <div>
+                <img src="../assets/logo.png" />
+            </div>
+
+            <div class="container-right-menu">
+                <button onclick="changeLanguage('pt')">
+                    Change to pt
+                    </button>
+                  <button onclick="changeLanguage('es')">
+                    Change to es
+                  </button>
+                  <button onclick="changeLanguage('en')">
+                    Change to en
+                  </button>
+
+                <div onclick="handleMenu()" class="right-nav">
+                    <img class="i-menu" src="../assets/menu.png" />
+                    <img class="dna" src="../assets/icons/menu-dna.svg" />
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="menuu">
+        <div class="menu-container">
+            <img src="../assets/icons/close.png" onclick="handleMenu()">
+            <div class="content-menu">
+                <ul>
+                    <li class="nav-home">
+                        <span onclick="handleHome()">HOME</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="QuemSomos" onclick="handleQuemSomos()">QUEM SOMOS</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Equipe" onclick="handleEquipe()">EQUIPE</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Contato" onclick="handleContato()">CONTATO</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <div class="wrapper">
         <div class="form-container">
             <form action="">
@@ -33,8 +98,87 @@
             </form>
         </div>
     </div>
-    
+
+    <footer>
+        <!-- QUADRADO 1 ROSA ESQUERDA -->
+        <div class="left-pink-container">
+            <div class="ret-left-pink"></div>
+        </div>
+        <!-- QUADRADO 2 ROSA ESQUERDA -->
+        <div class="left-pink2-container">
+            <div class="ret-left-pink2"></div>
+        </div>
+        <!-- QUADRADO AZUL CENTRAL -->
+        <div class="center-blue-container">
+            <div class="center-center"></div>
+        </div>
+        <!-- FILTRO COM OPACIDADE DE BG -->
+        <div class="footer-bg-op"></div>
+        <!-- QUADRADO AZUL ESQUERDA -->
+        <div class="left-blue-container">
+            <div class="ret-left-blue"></div>
+        </div>
+        <!-- QUADRADO ROSA DIREITA -->
+        <div class="right-pink-container">
+            <div class="ret-right-pink"></div>
+        </div>
+        <!-- QUADRADO AZUL DIREITA -->
+        <div class="right-blue-container">
+            <div class="ret-right-blue"></div>
+        </div>
+        <!-- <div class="bg-balls"></div> -->
+        <img class="bg-img" src="./assets/img-footer/fundo-footer.png" alt="">
+        <div class="container-footer">
+            <div class="logo-footer">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="content-footer">
+                <div class="unidade">
+                    <h2 class="lang" key="NossaUnidade">Nossa Unidade</h2>
+                    <a href="https://goo.gl/maps/e1Xxc5AXoCHpo9Bg6" target="_blank">
+                        Rua Reverendo Francisco <br />
+                        Lotufo, 663 - Sala 6 <br />
+                        Vila Nogueira, Botucatu - SP <br />
+                        18606-810 <br />
+                    </a>
+                </div>
+                <div class="institucional">
+                    <h2 class="lang" key="Institucional">Institucional</h2>
+                    <a class="lang" key="QuemSomos" href="#">Quem Somos</a><br>
+                    <a class="lang" key="Equipe" href="#">Equipe</a><br>
+                    <a class="lang" key="Contato" href="#">Contato</a>
+                </div>
+                <div class="contato">
+                    <h2 class="lang" key="Contato">Contato</h2>
+                        <a href="tel:+551433548256">(14) 3354-8256</a> <br>
+                        <a href="mailto:contato@elevenup.com.br">contato@elevenup.com.br</a>
+                </div>
+                <div class="social">
+                    <h2 class="lang" key="RedesSociais">Redes Sociais</h2>
+                    <div class="container-redes-sociais">
+                        <a href="">
+                            <img src="../assets/icons/redes-sociais/face.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="../assets/icons/redes-sociais/insta.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="../assets/icons/redes-sociais/linkedin.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven</p>
+            <a class="lang copyright" key="TodosDireitos" href="#">© 2023 Todos os Direitos Reservados | Termos de Uso</a>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script type="module" src="./js/translate.js"></script>
+
 </body>
+
 
 
 

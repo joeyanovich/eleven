@@ -1,4 +1,4 @@
-export var en = {
+ export var en = {
     "translation": {
         "Compromissos": "Appointments",
         "CompromissosText": "Our team includes specialists in design, traffic in digital channels and market intelligence, in addition to Biomedical and Biologists with master's and doctoral degrees and Bioprocess Engineers, trained in the most renowned universities in the country.",
@@ -43,7 +43,7 @@ export var en = {
         "TodosDireitos": "All rights reserved | Terms of use",
         "QuemSomos": "About Us",
         "Equipe": "Team",
-        "QuemSomosText": "ElevenUp – Life Science and Healthcare Marketing – was born in 2019 with the proposal to carry out marketing work aimed at human and animal health companies, in addition to serving biotechnology startups. market, there were very few capable of providing complete advice in the marketing area (4ps – price, place, advertising and product) and understanding the particulars of a market that increasingly demands content with a scientific and technical basis. In this way, we formed a team with knowledge in marketing tools and market intelligence and at the same time had a scientific background.",
+        "QuemSomosText": "A ElevenUp – Life Science and Healthcare Marketing – nasceu em 2019 com a proposta de realizar um trabalho de marketing voltado para as empresas de saúde humana e animal, além de atender startups de biotecnologia.Percebemos que ao mesmo tempo que existiam diversas agências de publicidade no mercado, existiam muito poucas capazes de fornecer uma assessoria completa na área de marketing (4ps –preço, praça, propaganda e produto) e entender as particulares de um mercado que cada vez mais exige conteúdos com embasamento científico e técnico. Desta forma formamos uma equipe comconhecimento em ferramentas de marketing e inteligência de mercado e que ao mesmo tempo possuíam background científico.",
         "NossoTimeTem": "Our team contains experts in:",
         "TrafegoEmCanais": "Traffic on digital channels and market intelligence",
         "DesenvolvedoresWeb": "WebDeveloper",
