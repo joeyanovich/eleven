@@ -39,8 +39,6 @@ body{
     justify-content: center;
     overflow-x: hidden;
     background-color: var(--gray-200);
-
-    margin-bottom: 1000px;
 }
 .wrapper{
     position: relative;

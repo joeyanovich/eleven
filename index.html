@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="./assets/eleven.svg">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="/css/index.css">
     
@@ -40,7 +40,22 @@
 </head>
 <body>
     <nav>
-        <div class="naav menu-desactive">
+        <div class="nav-mobile">
+            <div class="container-nav-mobile">
+                <div class="left-side">
+                    <a href="./index.html">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="right-side">
+                    <div onclick="handleMenu()" class="right-nav">
+                        <img class="i-menu" src="../assets/menu.png" />
+                        <img class="dna" src="../assets/icons/menu-dna.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-desktop menu-desactive">
             <div>
                 <img src="../assets/logo.png" />
             </div>
@@ -68,6 +83,17 @@
         <div class="menu-container">
             <img src="../assets/icons/close.png" onclick="handleMenu()">
             <div class="content-menu">
+                <div class="translate-mobile">
+                    <button onclick="changeLanguage('pt')">
+                        Change to pt
+                        </button>
+                      <button onclick="changeLanguage('es')">
+                        Change to es
+                      </button>
+                      <button onclick="changeLanguage('en')">
+                        Change to en
+                      </button>
+                </div>
                 <ul>
                     <li class="nav-home">
                         <span onclick="handleHome()">HOME</span>
@@ -86,7 +112,8 @@
         </div>
     </section>
     <main class="video-bg">
-        <video src="/assets/videos/videobg.mp4" autoplay loop muted></video>
+        <video class="video-desktop" src="/assets/videos/videobg.mp4" autoplay loop muted></video>
+        <video class="video-mobile" src="/assets/videos/videobg-mobile.mp4" autoplay loop muted></video>
     </main>
     <section class="compromissos">
         <div class="comp-left">
@@ -116,6 +143,65 @@
                 <img src="/assets/circles/circulo-4.png" alt="">
                 <span class="lang" key="EntregaDeResultados">Entrega de <br> Resultados</span>
             </div>
+        </div>
+    </section>
+    <section class="segmentos-mobile">
+        <h2 class="lang" key="Segmentos">Segmentos</h2>
+        <div class="superior-title">
+            <div class="left-side">
+                <h3>HEALTHCARE</h3>
+            </div>
+            <div class="divisao">
+                |
+            </div>
+            <div class="right-side">
+                <h3>LIFESCIENCE</h3>
+            </div>
+        </div>
+        <div class="inferior-healthcare inferior">
+            <h3>HEALTHCARE</h3>
+            <p>
+                Através de nosso conhecimento
+                biológico, criamos uma estratégia
+                personalizada para o seu negócio
+                utilizando marketing e Healthcare.
+                Vamos proporcionar sua evolução
+                potencializando seus resultados,
+                aumentando sua presença digital e
+                 solucionando todos os seus
+                 problemas de marketing.
+            </p>
+            <h4 class="center">Utilizamos Ciência e Inovação!</h4>
+            <h4>Nossos Segmentos:</h4>
+            <ul>
+                <li>Laboratórios de análise.</li>
+                <li>Serviços especializados em saúde.</li>
+                <li>Empresas de equipamentos especializados.</li>
+                <li>Empresas de plano de saúde (clínicas populares).</li>
+                <li>Clínicas de saúde.</li>
+            </ul>
+        </div>
+        <div class="inferior-lifescience inferior">
+            <h3>LIFESCIENCE</h3>
+            <p>
+                Através de nosso conhecimento
+                biológico, criamos uma estratégia
+                personalizada para o seu negócio
+                utilizando marketing e Life Science.
+                Vamos proporcionar sua evolução
+                potencializando seus resultados,
+                aumentando sua presença digital e
+                 solucionando todos os seus
+                 problemas de marketing.
+            </p>
+            <h4 class="center">Utilizamos Ciência e Inovação!</h4>
+            <h4>Nossos Segmentos:</h4>
+            <ul>
+                <li>Representantes de materiais laboratoriais e médico-hospitalares.</li>
+                <li>Prestadores de serviços de suporte e manutenção.</li>
+                <li>Softwares relacionados à Biotech.</li>
+                <li>Indústria de materiais laboratoriais e médico-hospitalares.</li>
+            </ul>
         </div>
     </section>
     <section class="segmentos">

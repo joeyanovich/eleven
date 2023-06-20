@@ -46,8 +46,10 @@ nav{
     display: flex;
     justify-content: center;
 }
-
-.naav{
+.nav-mobile{
+    display: none;
+}
+.nav-desktop{
     transition: all 700ms ease-in-out ;
     display: flex;
     justify-content: space-between;
@@ -74,7 +76,7 @@ nav{
     height: 6rem;
 }
 
-.naav img{
+.nav-desktop img{
     width: 8rem;
 }
 
@@ -204,10 +206,16 @@ nav{
     width: 100vw;
     overflow: hidden;
 }
-.video-bg video{
+.video-bg .video-desktop{
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+}
+.translate-mobile{
+    display: none;
+}
+.video-mobile{
+    display: none;
 }
 .compromissos{
     display: flex;
@@ -277,6 +285,9 @@ nav{
 }
 .segmentos{
     width: 100%;
+}
+.segmentos-mobile{
+    display: none;
 }
 .container-segmentos{
     width: 1440px;
@@ -771,8 +782,151 @@ hr{
     font-size: 14px;
 }
 
-/* Alterar aqui as classes */
+/* Responsive */
 
-
-
-
+@media (max-width: 640px)
+{
+    .nav-desktop{
+    display: none;
+    }
+    .nav-mobile{
+        display: block;
+        position: fixed;
+        height: 96px;
+        width: 100%;
+        backdrop-filter: blur(12px);
+        background-color: var(--white-80);
+        backface-visibility: hidden;
+        z-index: 20;
+    }
+    .container-nav-mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+    }
+    .left-side img{
+        width: 6rem;
+        object-fit: cover;
+    }
+    .menuu{
+        z-index: 21;
+    }
+    .menu-container{
+        position: relative;
+    }
+    .menuu li{
+        font-size: 30px;
+        line-height: 80px;
+    }
+    .translate-mobile{
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        display: block;
+    }
+    .video-desktop{
+        display: none;
+    }
+    .video-mobile{
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+    .compromissos{
+        flex-direction: column;
+        height: auto;
+        margin: 1.25rem;
+        padding: 1.5rem;
+        margin-top: 50px;
+    }
+    .comp-left{
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+    .compromissos h2{
+        text-align: center;
+        font-size: 50px;
+    }
+    .compromissos p{
+        font-size: 14px;
+        padding: 0;
+    }
+    .comp-right{
+        padding-top: 50px;
+    }
+    .quad{
+        width: 8rem;
+        height: 8rem;
+        gap: 0.5rem;
+    }
+    .quad img{
+        width: 3.5rem;
+    }
+    .quad span{
+        font-size: 13px;
+    }
+    .segmentos{
+        display: none;
+    }
+    .segmentos-mobile{
+        display: block;
+    }
+    .segmentos-mobile .lang{
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    /* MUDAR AQUI O VISIVEL */
+    .inferior-lifescience{
+        display: none;
+    }
+    /* fim */
+    .superior-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin: 0 40px ;
+        gap: 15px;
+    }
+    .divisao{
+        font-size: 30px;
+    }
+    .superior-title h3{
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 30px;
+    }
+    .superior-title .left-side{
+        background-color: #FBCFE8;
+        padding: 8px;
+        border-radius: 10px 10px 0 0;
+    }
+    .inferior{
+        margin: 0 1.25rem;
+        padding: 40px 40px;
+        text-align: justify;
+        border-radius: 10px;
+        background-color: #FBCFE8;
+    }
+    .inferior h3{
+        font-size: 30px;
+        font-family: "Bebas Neue", sabns-serif;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .inferior p{
+        margin-bottom: 40px;
+    }
+    .inferior h4{
+        margin-bottom: 40px;
+    }
+    .inferior .center{
+        text-align: center;
+    }
+}
