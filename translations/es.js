@@ -9,7 +9,7 @@ export var es = {
         "Segmentos": "Segmentos",
         "ElevenUp": "ElevenUp – Marketing de Ciencias de la Vida y Salud – nació en 2019 con la propuesta de realizar labores de marketing dirigidas a empresas de salud humana y animal, además de atender a startups de biotecnología.",
         "PercebemosQue": "Nos dimos cuenta de que: Nos dimos cuenta de que, si bien había varias agencias de publicidad en el mercado, había muy pocas capaces de brindar asistencia completa en el área de marketing (4ps: precio, lugar, publicidad y producto) y comprender las particularidades de un mercado que demanda cada vez más contenidos con base científica y técnica, de esta forma formamos un equipo con conocimientos en herramientas de marketing e inteligencia de mercado y a la vez con formación científica.",
-        "HealthcareText": "A través de nuestro conocimiento biológico, creamos una estrategia personalizada para su negocio utilizando marketing y salud. Proporcionaremos tu evolución potenciando tus resultados, aumentando tu presencia digital y solucionando todos tus problemas de marketing.",
+        "HealthcareText": "Através de nuestro conocimiento biológico, creamos una estrategia personalizada para su negocio utilizando marketing y salud. Proporcionaremos tu evolución potenciando tus resultados, aumentando tu presencia digital y solucionando todos tus problemas de marketing.",
         "UtilizamosCiencia": "¡Utilizamos la Ciencia y la Innovación!",
         "NossosSegmentos": "Nuestros segmentos:",
         "LaboratoriosDeAnalise": "Laboratorios de análisis.",
