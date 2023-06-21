@@ -277,11 +277,17 @@ nav{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 .segmentos h2, .clientes h2, .solucoes h2, .combinacao h2{
     font-family: "Bebas Neue", sans-serif;
     font-size: 150px;
+}
+.clientes h2{
+    margin-bottom: 50px;
+}
+.clientes .text-mobile{
+    display: none;
 }
 .segmentos{
     width: 100%;
@@ -378,7 +384,9 @@ nav{
 .clientes{
     width: 100%;
 }
-
+.clientes-mobile{
+    display: none;
+}
 .container1-clientes {
     display: flex;
     overflow-x: hidden;
@@ -521,6 +529,13 @@ nav{
     text-align: left;
 }
 footer{
+    width: 100%;
+    height: 100%;
+}
+.footer-mobile{
+    display: none;
+}
+.footer-desktop{
     display: flex;
     position: relative;
     margin-top: 7rem;
@@ -708,7 +723,7 @@ footer{
     background-image: url("../assets/img-footer/fundo-opacidade.png");
     filter: blur(4px);
 }
-footer .bg-img{
+.footer-desktop .bg-img{
     position: absolute;
     bottom: 0;
     max-width: 100%;
@@ -784,7 +799,7 @@ hr{
 
 /* Responsive */
 
-@media (max-width: 640px)
+@media (max-width: 800px)
 {
     .nav-desktop{
     display: none;
@@ -881,8 +896,8 @@ hr{
         font-size: 50px;
         text-align: center;
         margin-top: 50px;
+        margin-bottom: 30px;
     }
-    /* MUDAR AQUI O VISIVEL */
     .inferior-lifescience{
         display: none;
         background-color: #BFDBFE;
@@ -891,7 +906,6 @@ hr{
     .inferior-healthcare{
         background-color: #FBCFE8;
     }
-    /* fim */
     .superior-title {
         display: flex;
         justify-content: center;
@@ -939,5 +953,145 @@ hr{
     }
     .inferior .center{
         text-align: center;
+    }
+    .clientes h2{
+        font-size: 50px;
+    }
+    .clientes .text-mobile{
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container1-clientes, .container2-clientes{
+        display: none;
+    }
+    .clientes-mobile{
+        display: block;
+        overflow-x: scroll;
+        width: 100%;
+    }
+    .clientes-mobile p{
+        text-align: center;
+        margin-top: -10px ;
+        margin-bottom: 30px ;
+    }
+    .container-mobile-clientes img{
+        filter: grayscale(1);
+    }
+    .container-mobile-clientes img:hover{
+        filter: grayscale(0);
+    }
+    .container-mobile-clientes{
+        display: flex;
+        gap: 30px;
+        margin: 0 20px;
+    }
+    .solucoes h2{
+        font-size: 50px;
+    }
+    .solucoes p{
+        width: 80%;
+        font-size: 14px;
+    }
+    .cards-solucoes{
+        padding: 0 30px;
+        margin-bottom: 0;
+    }
+    .solucoes .cards{
+        width: 8rem;
+        height: 8rem;
+    }
+    .solucoes .cards .solucoes-bg-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .solucoes .cards .solucoes-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .solucoes .cards span{
+        font-size: 9px;
+    }
+    .combinacao h2{
+        font-size: 50px;
+    }
+    .combinacao .comb-p{
+        font-size: 14px;
+        padding: 0 250px;
+        margin: 2rem 0;
+    }
+    .combinacao h3{
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+    .cotainer-segmento .img-left, .cotainer-segmento .img-right{
+        display: none;
+    }
+    .cotainer-segmento{
+        margin-bottom: 700px;
+    }
+    .seg-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .seg-text .text-up, .seg-text .text-down{
+        margin: 0;
+        width: 30%;
+    }
+    .seg-text .text-up h4, .seg-text .text-down h4{
+        font-size: 36px;
+    }
+    .seg-text .text-up ul li, .seg-text .text-down ul li{
+        font-size: 14px;
+    }
+    .footer-desktop{
+        display: none;
+    }
+    .footer-mobile{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .content-footer-mobile{
+        background-color: white;
+        padding-bottom: 30px;
+    }
+    .content-footer-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-mobile svg{
+        margin-bottom: -10px;
+    }
+    .logo-footer-mobile img{
+        padding-top: 50px;
+        width: 150px;
+    }
+    .content-footer-mobile .title{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .content-footer-mobile .text{
+        font-size: 14px;
+    }
+    .content-footer-mobile a{
+        text-decoration: none;
+        color: black;
+    }
+    hr{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .final-footer-mobile p{
+        font-size: 14px;
+    }
+    .final-footer-mobile a{
+        font-size: 12px;
     }
 }
