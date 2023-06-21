@@ -7,6 +7,12 @@ const nav = document.querySelector('nav')
 
         const ls = document.querySelector(".ls-seg")
         const hc = document.querySelector(".hc-seg")
+        
+        const lsMobile = document.querySelector(".ls-mobile")
+        const hcMobile = document.querySelector(".hc-mobile")
+        const hcMobileCnt = document.querySelector(".inferior-healthcare")
+        const lsMobileCnt = document.querySelector(".inferior-lifescience")
+        const inferior = document.querySelector(".inferior")
 
         let previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -14,7 +20,7 @@ const nav = document.querySelector('nav')
         let y = 100
 
         window.addEventListener('scroll', function() {
-            var nav = document.querySelector('.naav');
+            var nav = document.querySelector('.nav-desktop');
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollPosition > 0) {
@@ -67,6 +73,22 @@ const nav = document.querySelector('nav')
                 imagem2.classList.add('img-atras');
                 hc.style.display = 'block'
                 ls.style.display = 'none'
+            }
+        }
+
+        var toggle = false;
+        function switchbtn(value){
+
+            if(value === 2){
+                hcMobile.style.backgroundColor = "#ECECEC"
+                hcMobileCnt.style.display = "none"
+                lsMobileCnt.style.display = "block"
+                lsMobile.style.backgroundColor = "#BFDBFE"
+            } else if(value ===3){
+                lsMobile.style.backgroundColor = "#ECECEC"
+                lsMobileCnt.style.display = "none"
+                hcMobileCnt.style.display = "block"
+                hcMobile.style.backgroundColor = "#FBCFE8"
             }
         }
 

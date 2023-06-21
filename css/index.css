@@ -885,6 +885,11 @@ hr{
     /* MUDAR AQUI O VISIVEL */
     .inferior-lifescience{
         display: none;
+        background-color: #BFDBFE;
+    }
+
+    .inferior-healthcare{
+        background-color: #FBCFE8;
     }
     /* fim */
     .superior-title {
@@ -906,13 +911,19 @@ hr{
         background-color: #FBCFE8;
         padding: 8px;
         border-radius: 10px 10px 0 0;
+        transition: 400ms all ease;
+    }
+    .superior-title .right-side{
+        padding: 8px;
+        border-radius: 10px 10px 0 0;
+        transition: 400ms all ease;
     }
     .inferior{
         margin: 0 1.25rem;
         padding: 40px 40px;
         text-align: justify;
         border-radius: 10px;
-        background-color: #FBCFE8;
+        transition: 400ms all ease;
     }
     .inferior h3{
         font-size: 30px;
