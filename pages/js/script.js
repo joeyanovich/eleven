@@ -92,12 +92,12 @@ const nav = document.querySelector('nav')
             location.reload();
         }
 
-        quemSomos.addEventListener('click', () => {
-            window.location.href = `./pages/quem-somos.html${location.hash}`
-        })
-        equipe.addEventListener('click', () => {
-            window.location.href = `./pages/equipe.html${location.hash}`
-        })
-        contato.addEventListener('click', () => {
-            window.location.href = `./pages/contato.html${location.hash}`
-        })
+        // quemSomos.addEventListener('click', () => {
+        //     window.location.href = `./pages/quem-somos.html${location.hash}`
+        // })
+        // equipe.addEventListener('click', () => {
+        //     window.location.href = `./pages/equipe.html${location.hash}`
+        // })
+        // contato.addEventListener('click', () => {
+        //     window.location.href = `./pages/contato.html${location.hash}`
+        // })
