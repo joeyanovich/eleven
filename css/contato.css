@@ -39,19 +39,47 @@ body{
     justify-content: center;
     overflow-x: hidden;
     background-color: var(--gray-200);
+
+    margin: 500px 0;
 }
-.wrapper{
+.container-title h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+    margin-bottom: 50px;
+}
+.container-form{
     position: relative;
-    width: 400px;
-    height: 440px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,.5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0,0,0,.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 1000px;
+    height: 620px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: white;
+}
+.left-side, .right-side{
+    flex: 1;
+}
+.left-side{
+    width: 100%;
+    height: 100%;
+}
+.left-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    width: 100%;
 }
 .form-container{
     width: 100%;
@@ -79,6 +107,16 @@ body{
 .input-box input:valid~label{
     top: -5px;
 }
+#textarea-container textarea:focus,
+#textarea-container textarea:valid{
+    height: 100px;
+}
+#textarea-container textarea:focus~label,
+#textarea-container textarea:valid~label{
+    top: -15px;
+
+}
+
 .input-box input{
     width: 100%;
     height: 100%;
@@ -86,111 +124,72 @@ body{
     border: none;
     outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 1280px;
-    margin-top: 10rem;
-}
-.title-contato h1{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 150px;
-    margin-bottom: 6rem;
-}
-.container-form{
-    width: 1000px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    background-color: var(--white-100);
-}
-.form-left-side, .form-right-side{
-    flex: 1;
-}
-.form-left-side{
-    width: 100%;
-    height: 100%;
-    background-color: red;
-}
-.form-left-side img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 3.5rem;
-}
-.input-box{
+#textarea-container{
     position: relative;
-    margin: 2.5rem 0;
-    width: 100%;
-    border-bottom: 2px solid #EFF6FF;
+    margin-top: 60px;
 }
-.input-box input{
+#textarea{
+    resize: none;
+    position: relative;
     width: 100%;
-    height: 30px;
-    padding: 1.25rem;
-    border-radius: 5px;
-    background-color: transparent;
+    height: 40px;
+    transition: .5s;
     border: none;
-    outline: none;
-    font-size: 18px;
-    transition: 400ms all ease-in-out;
 }
-.input-box label{
+.input-box2{
+    position: relative;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+    padding: 0;
+}
+#textarea-container label{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
     left: 5px;
-    transition: 0.5s;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #162938;
     pointer-events: none;
-    color: var(--blue-600);
+    transition: .5s;
 }
-.input-box input:focus~label, 
-.input-box input:valid~label{
-    top: -15px;
-}
-.input-box input:focus{
-    border-radius: 5px;
-    background-color:  #EFF6FF;
-}
-.form-right-side button{
-    padding: 0.5rem 1.75rem;
-    border-radius: 6px;
-    cursor: pointer;
+.btn-submit button{
+    padding: 10px 50px;
+    border-radius: 10px;
     border: none;
-    color: var(--white-100);
+    cursor: pointer;
     background-color: var(--blue-600);
-    font-size: 18px;
-} */
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.btn-submit button:hover{
+    background-color: var(--blue-900);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px){
+    .container-title h1{
+        font-size: 80px;
+    }
+    .container-form{
+        width: 90%;
+    }
+    .left-side{
+        display: none;
+    }
+    .right-side{
+        width: 100%;
+    }
+}
