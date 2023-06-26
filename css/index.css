@@ -46,6 +46,22 @@ nav{
     display: flex;
     justify-content: center;
 }
+.navegation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: red;
+    height: 40px;
+    /* width: 100%; */
+    border-radius: 50px;
+}
+.navegation button{
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 100%;
+}
 .nav-mobile{
     display: none;
 }
@@ -82,6 +98,7 @@ nav{
 
 .container-right-menu{
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -98,7 +115,7 @@ nav{
     z-index: 10;
 }
 .right-nav:hover{
-    animation: bgDna 500ms ease-in-out;
+    /* animation: bgDna 500ms ease-in-out; */
 }
 .right-nav:hover{
     transform: rotate(360deg); 

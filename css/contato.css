@@ -39,8 +39,6 @@ body{
     justify-content: center;
     overflow-x: hidden;
     background-color: var(--gray-200);
-
-    margin: 500px 0;
 }
 .container-title h1{
     font-family: "Bebas Neue", sans-serif;
@@ -166,18 +164,11 @@ body{
 .btn-submit button:hover{
     background-color: var(--blue-900);
 }
-
-
-
-
-
-
-
-
-
-
-
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 @media (max-width: 800px){
     .container-title h1{
