@@ -50,6 +50,9 @@ nav{
 .nav-mobile{
     display: none;
 }
+.left-side img:hover{
+    cursor: pointer;
+}
 .nav-desktop{
     transition: all 700ms ease-in-out ;
     display: flex;
