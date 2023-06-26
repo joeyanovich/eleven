@@ -166,18 +166,11 @@ body{
 .btn-submit button:hover{
     background-color: var(--blue-900);
 }
-
-
-
-
-
-
-
-
-
-
-
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 @media (max-width: 800px){
     .container-title h1{
