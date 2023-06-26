@@ -45,6 +45,7 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 30px;
 }
 .nav-mobile{
     display: none;
@@ -83,6 +84,37 @@ nav{
 .container-right-menu{
     display: flex;
     gap: 10px;
+}
+
+.translate-navigation{
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.translate-navigation ul{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.translate-navigation ul li{
+    position: relative;
+    list-style: none;
+}
+
+.translate-navigation ul li button{
+    background-color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 100ms ease-in-out
 }
 
 .right-nav{
@@ -836,10 +868,28 @@ hr{
         font-size: 30px;
         line-height: 80px;
     }
+    .translate-navigation ul{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .translate-navigation ul li button{
+        background-color: #363636;
+        color: white;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
     .translate-mobile{
         position: absolute;
-        top: 40px;
-        left: 20px;
+        top: 35px;
+        left: 40px;
         display: block;
     }
     .video-desktop{

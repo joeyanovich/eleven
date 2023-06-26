@@ -43,9 +43,7 @@
         <div class="nav-mobile">
             <div class="container-nav-mobile">
                 <div class="left-side">
-                    <a href="./index.html">
-                        <img src="./assets/logo.png" alt="">
-                    </a>
+                    <img onclick="handleHome()" src="../assets/logo.png" alt="">
                 </div>
                 <div class="right-side">
                     <div onclick="handleMenu()" class="right-nav">
@@ -57,19 +55,23 @@
         </div>
         <div class="nav-desktop menu-desactive">
             <div>
-                <img src="../assets/logo.png" />
+                <img onclick="handleHome()" src="../assets/logo.png" />
             </div>
 
             <div class="container-right-menu">
-                <button onclick="changeLanguage('pt')">
-                    Change to pt
-                    </button>
-                  <button onclick="changeLanguage('es')">
-                    Change to es
-                  </button>
-                  <button onclick="changeLanguage('en')">
-                    Change to en
-                  </button>
+                <div class="translate-navigation">
+                    <ul>
+                        <li class="list ">
+                            <button onclick="changeLanguage('pt')">PT</button>
+                        </li>
+                        <li class="list">
+                            <button onclick="changeLanguage('es')">ES</button>
+                        </li>
+                        <li  class="list">
+                            <button onclick="changeLanguage('en')">EN</button>
+                        </li>
+                    </ul>
+                </div>
 
                 <div onclick="handleMenu()" class="right-nav">
                     <img class="i-menu" src="../assets/menu.png" />
@@ -84,15 +86,19 @@
             <img src="../assets/icons/close.png" onclick="handleMenu()">
             <div class="content-menu">
                 <div class="translate-mobile">
-                    <button onclick="changeLanguage('pt')">
-                        Change to pt
-                        </button>
-                      <button onclick="changeLanguage('es')">
-                        Change to es
-                      </button>
-                      <button onclick="changeLanguage('en')">
-                        Change to en
-                      </button>
+                    <div class="translate-navigation">
+                        <ul>
+                            <li class="list ">
+                                <button onclick="changeLanguage('pt')">PT</button>
+                            </li>
+                            <li class="list">
+                                <button onclick="changeLanguage('es')">ES</button>
+                            </li>
+                            <li  class="list">
+                                <button onclick="changeLanguage('en')">EN</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <ul>
                     <li class="nav-home">
@@ -552,38 +558,6 @@
                     </a>
                 </div>
             </div>
-            
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fillOpacity="1" d="M0,160L60,160C120,160,240,160,360,181.3C480,203,600,245,720,256C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-            <div class="content-footer-mobile">
-                <div class="logo-footer-mobile">
-                    <img src="./assets/logo.png" alt="">
-                </div>
-                <div class="content-footer-mobile">
-                    <div class="unindade-mobile">
-                        <h2>Nossa Unidade</h2>
-                        <a href="">
-                            Rua Reverendo Francisco <br>
-                            Lotufo, 663 - Sala 6 <br>
-                            Vila Nogueira, Botucatu - SP <br>
-                            18606-810 <br>
-                        </a>
-                    </div>
-                    <div class="institucional-mobile">
-                        h2
-                    </div>
-                    <div class="contato-mobile">
-
-                    </div>
-                    <div class="social-mobile">
-
-                    </div>
-                </div>
-                <hr>
-                <p>Desenvolvido com muito <span>♥</span> por <span class="eleven">Eleven</span></p>
-                <a href="">
-                    © 2023 Todos os Direitos Reservados | Termos de Uso
-                </a>
-            </div> -->
         </div>
     </footer>
     <script src="../js/script.js"></script>

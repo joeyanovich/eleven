@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/contato.css">
-    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../css/index.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -42,6 +42,84 @@
 </head>
 
 <body>
+    <nav>
+        <div class="nav-mobile">
+            <div class="container-nav-mobile">
+                <div class="left-side">
+                    <img onclick="handleHome()" src="../assets/logo.png" alt="">
+                </div>
+                <div class="right-side">
+                    <div onclick="handleMenu()" class="right-nav">
+                        <img class="i-menu" src="../assets/menu.png" />
+                        <img class="dna" src="../assets/icons/menu-dna.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-desktop menu-desactive">
+            <div>
+                <img onclick="handleHome()" src="../assets/logo.png" />
+            </div>
+
+            <div class="container-right-menu">
+                <div class="translate-navigation">
+                    <ul>
+                        <li class="list ">
+                            <button onclick="changeLanguage('pt')">PT</button>
+                        </li>
+                        <li class="list">
+                            <button onclick="changeLanguage('es')">ES</button>
+                        </li>
+                        <li  class="list">
+                            <button onclick="changeLanguage('en')">EN</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div onclick="handleMenu()" class="right-nav">
+                    <img class="i-menu" src="../assets/menu.png" />
+                    <img class="dna" src="../assets/icons/menu-dna.svg" />
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="menuu">
+        <div class="menu-container">
+            <img src="../assets/icons/close.png" onclick="handleMenu()">
+            <div class="content-menu">
+                <div class="translate-mobile">
+                    <div class="translate-navigation">
+                        <ul>
+                            <li class="list ">
+                                <button onclick="changeLanguage('pt')">PT</button>
+                            </li>
+                            <li class="list">
+                                <button onclick="changeLanguage('es')">ES</button>
+                            </li>
+                            <li  class="list">
+                                <button onclick="changeLanguage('en')">EN</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li class="nav-home">
+                        <span onclick="handleHome()">HOME</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="QuemSomos" onclick="handleQuemSomos()">QUEM SOMOS</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Equipe" onclick="handleEquipe()">EQUIPE</span>
+                    </li>
+                    <li>
+                        <span class="lang" key="Contato" onclick="handleContato()">CONTATO</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <div class="container-title">
         <h1 class="lang" key="Contato">Contato</h1>
     </div>
@@ -95,7 +173,7 @@
                                     class="wpforms-field-large wpforms-field-required"
                                     name="wpforms[fields][2]"
                                     required="">
-                                    <label class="lang wpforms-field-label" for="email">
+                                    <label class="lang wpforms-field-label" for="email" key="Email">
                                         E-mail
                                     <span class="wpforms-required-label">*</span>
                                 </label>
@@ -106,12 +184,11 @@
                                     id="textarea"
                                     class="wpforms-field-large wpforms-field-required"
                                     name="wpforms[fields][2]"
-                                    required="">
-                                </textarea>
+                                    required=""></textarea>
                                 <label
                                     class="lang wpforms-field-label"
                                     for="textarea"
-                                    key="Email">
+                                    key="Mensagem" >
                                         Deixe uma mensagem
                                     <span class="wpforms-required-label">*</span>
                                 </label>
@@ -142,6 +219,137 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer-desktop">
+            <!-- QUADRADO 1 ROSA ESQUERDA -->
+            <div class="left-pink-container quad-footer">
+            <div class="ret-left-pink"></div>
+            </div>
+            <!-- QUADRADO 2 ROSA ESQUERDA -->
+            <div class="left-pink2-container quad-footer">
+                <div class="ret-left-pink2"></div>
+            </div>
+            <!-- QUADRADO AZUL CENTRAL -->
+            <div class="center-blue-container quad-footer">
+                <div class="center-center"></div>
+            </div>
+            <!-- FILTRO COM OPACIDADE DE BG -->
+            <div class="footer-bg-op"></div>
+            <!-- QUADRADO AZUL ESQUERDA -->
+            <div class="left-blue-container quad-footer">
+                <div class="ret-left-blue"></div>
+            </div>
+            <!-- QUADRADO ROSA DIREITA -->
+            <div class="right-pink-container quad-footer">
+                <div class="ret-right-pink"></div>
+            </div>
+            <!-- QUADRADO AZUL DIREITA -->
+            <div class="right-blue-container quad-footer">
+                <div class="ret-right-blue"></div>
+            </div>
+            <!-- <div class="bg-balls"></div> -->
+            <img class="bg-img" src="../assets/img-footer/fundo-footer.png" alt="">
+            <div class="container-footer">
+                <div class="logo-footer">
+                    <img src="../assets/logo.png" alt="">
+                </div>
+                <div class="content-footer">
+                    <div class="unidade">
+                        <h2 class="lang" key="NossaUnidade">Nossa Unidade</h2>
+                        <a href="https://goo.gl/maps/e1Xxc5AXoCHpo9Bg6" target="_blank">
+                            Rua Reverendo Francisco <br />
+                            Lotufo, 663 - Sala 6 <br />
+                            Vila Nogueira, Botucatu - SP <br />
+                            18606-810 <br />
+                        </a>
+                    </div>
+                    <div class="institucional">
+                        <h2 class="lang" key="Institucional">Institucional</h2>
+                        <a class="lang" key="QuemSomos" href="#">Quem Somos</a><br>
+                        <a class="lang" key="Equipe" href="#">Equipe</a><br>
+                        <a class="lang" key="Contato" href="#">Contato</a>
+                    </div>
+                    <div class="contato">
+                        <h2 class="lang" key="Contato">Contato</h2>
+                            <a href="tel:+551433548256">(14) 3354-8256</a> <br>
+                            <a href="mailto:contato@elevenup.com.br">contato@elevenup.com.br</a>
+                    </div>
+                    <div class="social">
+                        <h2 class="lang" key="RedesSociais">Redes Sociais</h2>
+                        <div class="container-redes-sociais">
+                            <a href="">
+                                <img src="../assets/icons/redes-sociais/face.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="../assets/icons/redes-sociais/insta.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="../assets/icons/redes-sociais/linkedin.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven </p>
+                <a class="lang copyright" key="TodosDireitos" href="#"> © 2023 Todos os Direitos Reservados | Termos de Uso</a>
+            </div>
+        </div>
+        <div class="footer-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fillOpacity="1" d="M0,160L60,160C120,160,240,160,360,181.3C480,203,600,245,720,256C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+            <div class="content-footer-mobile">
+                <div class="logo-footer-mobile">
+                    <img src="../assets/logo.png" alt="">
+                </div>
+                <div class="unidade">
+                    <h2 class="lang  title" key="NossaUnidade">Nossa Unidade</h2>
+                    <a href="https://goo.gl/maps/e1Xxc5AXoCHpo9Bg6" target="_blank" class="text">
+                        Rua Reverendo Francisco <br />
+                        Lotufo, 663 - Sala 6 <br />
+                        Vila Nogueira, Botucatu - SP <br />
+                        18606-810 <br />
+                    </a>
+                </div>
+                <div class="institucional">
+                    <h2 class="lang title" key="Institucional">Institucional</h2>
+                    <a class="lang text" key="QuemSomos" onclick="handleQuemSomos">Quem Somos</a><br>
+                    <a class="lang text" key="Equipe" onclick="handleEquipe">Equipe</a><br>
+                    <a class="lang text" key="Contato" onclick="handleContato">Contato</a>
+                </div>
+                <div class="contato">
+                    <h2 class="lang title" key="Contato">Contato</h2>
+                        <a href="tel:+551433548256" class="text">(14) 3354-8256</a> <br>
+                        <a href="mailto:contato@elevenup.com.br" class="text">contato@elevenup.com.br</a>
+                </div>
+                <div class="social">
+                    <h2 class="lang title" key="RedesSociais">Redes Sociais</h2>
+                    <div class="container-redes-sociais">
+                        <a href="https://www.facebook.com/ElevenUpMarketing" target="_blank">
+                            <img src="../assets/icons/redes-sociais/face.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/elevenupmktg/?hl=pt-br" target="_blank">
+                            <img src="../assets/icons/redes-sociais/insta.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/company/elevenup/" target="_blank">
+                            <img src="../assets/icons/redes-sociais/linkedin.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="final-footer-mobile">
+                    <hr />
+                    <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven </p>
+                    <a class="lang copyright" key="TodosDireitos" href="./pages/politica-privacidade.html">
+                        © 2023 Todos os Direitos Reservados <br>
+                        Política de Privacidade | Termos de Uso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script type="module" src="../js/translate.js"></script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="

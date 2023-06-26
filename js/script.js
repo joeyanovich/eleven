@@ -110,6 +110,5 @@ const nav = document.querySelector('nav')
             location.reload();
         }
 
-    
-        
+      
         
