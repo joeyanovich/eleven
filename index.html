@@ -19,19 +19,19 @@
     <script>
 
         function handleHome(){
-            window.location.href = `/index.html${location.hash}`
+            window.location.href = `/${location.hash}`
         }
         
         function handleQuemSomos(){
-            window.location.href = `pages/quem-somos.html${location.hash}`
+            window.location.href = `quem-somos.html${location.hash}`
         }
         
         function handleEquipe(){
-            window.location.href = `pages/equipe.html${location.hash}`
+            window.location.href = `equipe.html${location.hash}`
         }
         
         function handleContato(){
-            window.location.href = `pages/contato.html${location.hash}`
+            window.location.href = `contato.html${location.hash}`
         }
 
     </script>
@@ -55,7 +55,7 @@
         </div>
         <div class="nav-desktop menu-desactive">
             <div>
-                <img onclick="handleHome()" src="../assets/logo.png" />
+                <img class="img-logo" onclick="handleHome()" src="../assets/logo.png" />
             </div>
 
             <div class="container-right-menu">
@@ -99,7 +99,7 @@
                         </ul>
                     </div>
                 </div>
-                <ul>
+                <ul class="ul-nav">
                     <li class="nav-home">
                         <span onclick="handleHome()">HOME</span>
                     </li>
@@ -477,9 +477,9 @@
                     </div>
                     <div class="institucional">
                         <h2 class="lang" key="Institucional">Institucional</h2>
-                        <a class="lang" key="QuemSomos" href="#">Quem Somos</a><br>
-                        <a class="lang" key="Equipe" href="#">Equipe</a><br>
-                        <a class="lang" key="Contato" href="#">Contato</a>
+                        <a class="lang" key="QuemSomos" onclick="handleQuemSomos()">Quem Somos</a><br>
+                        <a class="lang" key="Equipe" onclick="handleEquipe()">Equipe</a><br>
+                        <a class="lang" key="Contato" onclick="handleContato()">Contato</a>
                     </div>
                     <div class="contato">
                         <h2 class="lang" key="Contato">Contato</h2>
@@ -489,13 +489,13 @@
                     <div class="social">
                         <h2 class="lang" key="RedesSociais">Redes Sociais</h2>
                         <div class="container-redes-sociais">
-                            <a href="">
+                            <a href="https://www.facebook.com/ElevenUpMarketing">
                                 <img src="./assets/icons/redes-sociais/face.png" alt="">
                             </a>
-                            <a href="">
+                            <a href="https://www.instagram.com/elevenupmktg/?hl=pt-br">
                                 <img src="./assets/icons/redes-sociais/insta.png" alt="">
                             </a>
-                            <a href="">
+                            <a href="https://www.linkedin.com/company/elevenup/">
                                 <img src="./assets/icons/redes-sociais/linkedin.png" alt="">
                             </a>
                         </div>
@@ -559,7 +559,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
-    <script type="module" src="../js/translate.js"></script>
+    <script src="./js/script.js"></script>
+    <script type="module" src="./js/translate.js"></script>
 </body>
 </html>

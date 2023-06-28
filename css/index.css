@@ -91,6 +91,7 @@ nav{
 
 .menu-desactive{
     position: absolute;
+    z-index: 10; 
     top: 0;
     width: 100%;
     height: 6rem;
@@ -98,6 +99,7 @@ nav{
 
 .nav-desktop img{
     width: 8rem;
+    cursor: pointer;
 }
 
 .container-right-menu{
@@ -149,9 +151,9 @@ nav{
     transition: all 500ms ease-in-out;
     z-index: 10;
 }
-.right-nav:hover{
-    /* animation: bgDna 500ms ease-in-out; */
-}
+/* .right-nav:hover{
+    animation: bgDna 500ms ease-in-out;
+} */
 .right-nav:hover{
     transform: rotate(360deg); 
 }
@@ -604,7 +606,7 @@ footer{
     position: absolute;
     top: -3rem;
     left: -5rem;
-    filter: blur(4px);
+    filter: blur(16px);
     width: 12rem;
     height: 12rem;
     transform: rotate(-60deg);
@@ -633,7 +635,7 @@ footer{
     height: 16rem;
     top: 4rem;
     left: -7rem;
-    filter: blur(4px);
+    filter: blur(16px);
     transform: rotate(-60deg);
     border-radius: 1.5rem;
     background-image: linear-gradient(var(--blue-600), var(--blue-900));
@@ -660,7 +662,7 @@ footer{
     height: 6rem;
     top: 6rem;
     left: 24rem;
-    filter: blur(16px);
+    filter: blur(5px);
     transform: rotate(-60deg);
     border-radius: 1.5rem;
     background-image: linear-gradient(var(--pink-500), var(--pink-800));
@@ -687,10 +689,10 @@ footer{
 }
 .center-center{
     position: absolute;
-    width: 24rem;
-    height: 14rem;
+    width: 18rem;
+    height: 10rem;
     top: -3rem;
-    filter: blur(4px);
+    /* filter: blur(4px); */
     transform: rotate(-24deg);
     border-radius: 1.5rem;
     background-image: linear-gradient(var(--blue-600), var(--blue-900));
@@ -721,7 +723,7 @@ footer{
     height: 6rem;
     top: -2.5rem;
     right: 24rem;
-    filter: blur(12px);
+    filter: blur(5px);
     transform: rotate(25deg);
     border-radius: 1.5rem;
     background-image: linear-gradient(var(--pink-500), var(--pink-800));
@@ -751,7 +753,7 @@ footer{
     width: 16rem;
     height: 15rem;
     right: -6rem;
-    filter: blur(4px);
+    filter: blur(16px);
     transform: rotate(-60deg);
     border-radius: 1.5rem;
     background-image: linear-gradient(var(--blue-600), var(--blue-900));
@@ -820,6 +822,10 @@ footer{
     font-size: 18px;
     color: var(--black-900);
 }
+.institucional a{
+    cursor: pointer;
+}
+
 .container-redes-sociais{
     display: flex;
     justify-content: center;
@@ -888,6 +894,9 @@ hr{
         font-size: 30px;
         line-height: 80px;
     }
+    .ul-nav li span:hover{
+        font-size: 30px;
+    }
     .translate-navigation ul{
         position: relative;
         width: 100%;
@@ -945,15 +954,15 @@ hr{
         padding-top: 50px;
     }
     .quad{
-        width: 8rem;
-        height: 8rem;
-        gap: 0.5rem;
+        width: 6.5rem;
+        height: 6.5rem;
+        padding: 0 20px;
     }
     .quad img{
-        width: 3.5rem;
+        width: 2.5rem;
     }
     .quad span{
-        font-size: 13px;
+        font-size: 10px;
     }
     .segmentos{
         display: none;
@@ -1082,8 +1091,13 @@ hr{
     .solucoes .cards span{
         font-size: 9px;
     }
+    .combinacao{
+        width: 100%;
+    }
     .combinacao h2{
         font-size: 50px;
+        width: 90%;
+        text-align: center;
     }
     .combinacao .comb-p{
         font-size: 14px;
@@ -1093,6 +1107,8 @@ hr{
     .combinacao h3{
         font-size: 30px;
         margin-bottom: 1rem;
+        text-align: center;
+        width: 90%;
     }
     .cotainer-segmento .img-left, .cotainer-segmento .img-right{
         display: none;

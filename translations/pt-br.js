@@ -38,7 +38,7 @@ export var pt = {
         "Institucional": "Institucional",
         "Contato": "Contato",
         "RedesSociais": "Redes Sociais",
-        "DesenvolvidoComMuito": "Desenvolvido com muito ♥ por Eleven<",
+        "DesenvolvidoComMuito": "Desenvolvido com muito ♥ por Eleven",
         "por": "por",
         "TodosDireitos": "Todos os Direitos Reservados | Termos de Uso",
         "QuemSomos": "Quem Somos",

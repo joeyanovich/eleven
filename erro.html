@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/erro.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Página de Erro</title>
+
+    <script>
+        function handleHome(){
+            window.location.href = `/${location.hash}`
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="./assets/erro404.png"/>
+        </div>
+
+        <div class="right-side">
+            <p>A página que você procura não está disponível ou não existe. Volte para a página anterior</p> <br>
+            <a onclick="handleHome()">Clique aqui para voltar para a página principal</a>
+        </div>
+    </div>
+</body>
+</html>
