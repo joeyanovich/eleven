@@ -1,0 +1,57 @@
+:root{
+    --blue-600: #025ead;
+    --blue-800: #003868;
+    --blue-900: #012f57;
+    --pink-50: rgba(255, 14, 209, 0.25);
+    --pink-500: #ff0ed1;
+    --pink-600: #C60CA2;
+    --pink-800: #610950;
+    --black-100: rgba(0, 0, 0, 0.4);
+    --black-200: #363636;
+    --black-900: #222222;
+    --gray-200: #ececec;
+    --gray-400: #C0C0C0;
+    --gray-800: #696969;
+    --white-50: rgba(255, 255, 255, 0.3);
+    --white-80: rgba(255, 255, 255, 0.5);
+    --white-90: rgba(255, 255, 255, 0.7);
+    --white-100: #ffffff;
+    --white-150: #fafafa;
+    --white-200: rgba(250, 250, 250, 0.5);
+    --gradient-radial: radial-gradient(circle, rgba(255,14,209,0.6) 5%, rgba(255,14,209,0.05)52%, rgba(250, 250, 250, 0.5) 90%)
+    --gradient-radial2: radial-gradient(circle, rgba(255,14,209,0.1) 5%, rgba(255,14,209,0.05)52%, rgba(250, 250, 250, 0.5) 90%)
+    --gradient-radial-blue: radial-gradient(circle, rgba(0,56,104,0.5) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250,0) 100%)
+    --gradient-radial-blue2: radial-gradient(circle, rgba(0,56,104,0.1) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250,0.5) 90%)
+    --gradient-radial-blue-mini: radial-gradient(circle, rgba(0,56,104,0.1) 5%, rgba(45,91,130,0.05) 52%, rgba(250,250,250, 0.008) 70%)
+    --white-gradient: linear-gradient(138deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15449929971988796) 64%, rgba(250,250,250,1) 100%)
+    --black-gradient: linear-gradient(138deg, #222222 50%, #363636 90%, #4F4F4F 100% )
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: var(--gray-200);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+main h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 80px;
+}
+main h2{
+    margin-top: 50px;
+    font-size: 40px;
+}

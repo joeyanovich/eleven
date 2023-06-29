@@ -57,6 +57,7 @@ export var es = {
         "Enviar": "Mandar",
         "Arraste": "Arrastre hacia un lado para",
         "ver": "ver todos los clientes!",
-        "Obrigado": "Gracias por contactarnos"
+        "Obrigado": "Gracias por contactarnos",
+        "Retornaremos": "Responderemos lo antes posible" 
     }
 }

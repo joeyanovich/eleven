@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="icon" type="image/svg+xml" href="../assets/eleven.svg">
+    <link rel="icon" type="image/svg+xml" href="./assets/eleven.svg">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="./css/contato.css">
-    <link rel="stylesheet" href="./css/index.css">
-
-
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/obrigado.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-
     <script>
 
-        function handleHome() {
+        function handleHome(){
             window.location.href = `/${location.hash}`
         }
-
-        function handleQuemSomos() {
+        
+        function handleQuemSomos(){
             window.location.href = `quem-somos${location.hash}`
         }
-
-        function handleEquipe() {
+        
+        function handleEquipe(){
             window.location.href = `equipe${location.hash}`
         }
-
-        function handleContato() {
+        
+        function handleContato(){
             window.location.href = `contato${location.hash}`
         }
+
     </script>
+
     <title>ElevenUp - Life Science and Healthcare Marketing</title>
 </head>
-
 <body>
     <nav>
         <div class="nav-mobile">
@@ -58,7 +56,7 @@
         </div>
         <div class="nav-desktop menu-desactive">
             <div>
-                <img onclick="handleHome()" src="../assets/logo.png" />
+                <img class="img-logo" onclick="handleHome()" src="../assets/logo.png" />
             </div>
 
             <div class="container-right-menu">
@@ -81,7 +79,6 @@
                     <img class="dna" src="../assets/icons/menu-dna.svg" />
                 </div>
             </div>
-            
         </div>
     </nav>
     <section class="menuu">
@@ -120,105 +117,14 @@
             </div>
         </div>
     </section>
-    <div class="container-title">
-        <h1 class="lang" key="Contato">Contato</h1>
-    </div>
-    <div class="container-form">
-        <div class="left-side-form">
-            <img src="../assets/img-contato.jpg" alt="">
-        </div>
-        <div class="right-side-form">
-            <div class="wrapper">
-                <div class="form-container" id="wpforms-6038">
-                    <form
-                        id="wpforms-form-6038"
-                        class="wpforms-validate wpforms-form"
-                        data-formid="6038"
-                        method="post"
-                        enctype="multipart/form-data"
-                        action="/"
-                        data-token="17b97fb32988dffbcd9775e2d31812c8"
-                        novalidate="novalidate">
-                        <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
-                        <div class="wpforms-field-container">
-                            <div id="nome-container" class="input-box wpforms-field wpforms-field-name" data-field-id="3">
-                                <input
-                                    type="text"
-                                    id="nome"
-                                    class="wpforms-field-large wpforms-field-required"
-                                    name="wpforms[fields][3]"
-                                    required="">
-                                <label class="lang wpforms-field-label" for="nome" key="Nome">
-                                    Nome
-                                    <span class="wpforms-required-label">*</span>
-                                </label>
-                            </div>
-                            <div id="telefone-container" class="input-box wpforms-field wpforms-field-number" data-field-id="5">
-                                <input
-                                    type="number"
-                                    pattern="\d*"
-                                    id="telefone"
-                                    class="telefone wpforms-field-large wpforms-field-required"
-                                    name="wpforms[fields][5]"
-                                    required="">
-                                    <label class="lang wpforms-field-label" for="telefone" key="Telefone">
-                                        Telefone (WhatsaApp)
-                                        <span class="wpforms-required-label">*</span>
-                                    </label>
-                            </div>
-                            <div id="email-container" class="input-box wpforms-field wpforms-field-email wpforms-one-half wpforms-first" data-field-id="2">
-                                <input
-                                    type="text"
-                                    id="email"
-                                    class="wpforms-field-large wpforms-field-required"
-                                    name="wpforms[fields][2]"
-                                    required="">
-                                    <label class="lang wpforms-field-label" for="email" key="Email">
-                                        E-mail
-                                    <span class="wpforms-required-label">*</span>
-                                </label>
-                            </div>
-                            <div id="textarea-container" class="input-box2 wpforms-field wpforms-field-email wpforms-one-half wpforms-first" data-field-id="2">
-                                <textarea
-                                    type="text"
-                                    id="textarea"
-                                    class="wpforms-field-large wpforms-field-required"
-                                    name="wpforms[fields][2]"
-                                    required=""></textarea>
-                                <label
-                                    class="lang wpforms-field-label"
-                                    for="textarea"
-                                    key="Mensagem" >
-                                        Deixe uma mensagem
-                                    <span class="wpforms-required-label">*</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="btn-submit">
-                            <input type="hidden" name="wpforms[id]" value="6038">
-                                <input type="hidden" name="wpforms[author]" value="1">
-                                <input type="hidden" name="wpforms[post_id]" value="649">
-                                <button
-                                    type="submit"
-                                    name="wpforms[submit]"
-                                    id="wpforms-submit-6038"
-                                    class="wpforms-submit"
-                                    data-alt-text="Enviando"
-                                    data-submit-text="TENHO INTERESSE"
-                                    aria-live="assertive"
-                                    value="wpforms-submit">
-                                        Enviar
-                                </button>
-                        </div>
-                            <input type="hidden" name="HrobneB" value="Ew*u9]fA">
-                            <input type="hidden" name="ITJVhZem" value="gm.f3V2GMOi0B*">
-                            <input type="hidden" name="ZCLfwg-" value="1N9wstK">
-                            <input type="hidden" name="BkbPJLlDIapQj" value="cwsDdN">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main>
+        <h1 class="lang" key="Obrigado">
+            Obrigado por entrar em contato conosco
+        </h1>
+        <h2 class="lang" key="Retornaremos">
+            Responderemos o mais breve possível
+        </h2>
+    </main>
     <footer>
         <div class="footer-desktop">
             <!-- QUADRADO 1 ROSA ESQUERDA -->
@@ -313,9 +219,9 @@
                 </div>
                 <div class="institucional">
                     <h2 class="lang title" key="Institucional">Institucional</h2>
-                    <a class="lang text" key="QuemSomos" href="./pages/quem-somos">Quem Somos</a><br>
-                    <a class="lang text" key="Equipe" href="./pages/equipe">Equipe</a><br>
-                    <a class="lang text" key="Contato" href="./pages/contato">Contato</a>
+                    <a class="lang text" key="QuemSomos" onclick="handleQuemSomos()">Quem Somos</a><br>
+                    <a class="lang text" key="Equipe" onclick="handleEquipe()">Equipe</a><br>
+                    <a class="lang text" key="Contato" onclick="handleContato()">Contato</a>
                 </div>
                 <div class="contato">
                     <h2 class="lang title" key="Contato">Contato</h2>
@@ -347,65 +253,7 @@
             </div>
         </div>
     </footer>
-
     <script src="./js/script.js"></script>
     <script type="module" src="./js/translate.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    //pega referencia e parametros da url
-    var referrer = (referrer = document.referrer) ? "" + (referrer = (referrer = -1 < referrer.indexOf("://") ? referrer.split("/")[2] : referrer.split("/")[0]).split(":")[0].replace("www.", "").replace(".com", "").replace(".br", "")) : "acesso-Direto",
-        url_final = document.URL,
-        source_first = getUrlVars().utm_source ? getUrlVars().utm_source + "/" : "",
-        medium_first = getUrlVars().utm_medium ? getUrlVars().utm_medium + "/" : "",
-        campaign_first = getUrlVars().utm_campaign ? getUrlVars().utm_campaign : "";
-
-    var originAgrupada = referrer + "//" + url_final + "//" + "" + medium_first + "//" + campaign_first;
-
-    function getUrlVars() {
-        var i = {};
-        return window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (e, r, o) {
-            i[r] = o
-        }), i
-    }
-
-    jQuery("#wpforms-form-6038").on('submit', function (e) {
-        e.preventDefault();
-        var settings = {
-            "url": "https://app.fleeg.com/api/v1/integration/parse/Cdme1sdomyrXHm7FtXPzA3UP.json",
-            "method": "POST",
-            "timeout": 0,
-            "headers": {
-                "Content-Type": "application/json"
-            },
-            "data": JSON.stringify({
-                "event": "Contato Site",
-                "person": {
-                    "origin": "Formulário Contato ElevenUp",
-                    "name": jQuery('#nome').val(),
-                    "email": jQuery('#email').val(),
-                    "phone": jQuery('#telefone').val(),
-                "custom_fields": {
-                        "4ca155bb53dbd89f4eb402d8258aa9e47f26a446": jQuery('#textarea').val(),
-                    }
-                }
-            }),
-        };
-        jQuery.ajax(settings).done(function (response) {
-            console.log(response);
-            $('#wpforms-form-6038')[0].reset();
-            handleObrigado()
-        });
-        return false;
-    })
-
-    // Redireciona para página de obrigado
-    function handleObrigado() {
-            window.location.href = `obrigado${location.hash}`
-        }
-
-</script>
-
 </html>

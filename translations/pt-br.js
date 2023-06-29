@@ -57,6 +57,7 @@ export var pt = {
         "Enviar": "Enviar",
         "Arraste": "Arraste para o lado para",
         "ver": "ver todos os clientes!",
-        "Obrigado": "Obrigado por entrar em contato conosco" 
+        "Obrigado": "Obrigado por entrar em contato conosco",
+        "Retornaremos": "Responderemos o mais breve possível" 
     }
 }

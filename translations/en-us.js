@@ -57,6 +57,7 @@ export var en = {
         "Enviar": "Submit",
         "Arraste": "Drag to the side to",
         "ver": "see all customers!",
-        "Obrigado": "Thank you for contacting us"
+        "Obrigado": "Thank you for contacting us",
+        "Retornaremos": "We will respond as soon as possible" 
     }
 }
