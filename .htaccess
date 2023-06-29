@@ -1,1 +1,6 @@
+## ## Redirecionar para página de erro
 ErrorDocument 404 /erro.html
+
+## ## Retirar o .html dos links
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html
