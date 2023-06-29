@@ -23,15 +23,15 @@
         }
         
         function handleQuemSomos(){
-            window.location.href = `quem-somos.html${location.hash}`
+            window.location.href = `quem-somos${location.hash}`
         }
         
         function handleEquipe(){
-            window.location.href = `equipe.html${location.hash}`
+            window.location.href = `equipe${location.hash}`
         }
         
         function handleContato(){
-            window.location.href = `contato.html${location.hash}`
+            window.location.href = `contato${location.hash}`
         }
 
     </script>
@@ -274,7 +274,6 @@
                 todos os clientes
             </p>
         <div class="clientes-mobile">
-            
             <div class="container-mobile-clientes">
                 <img src="./assets/clients-logo/apoiolab-color.png">
                 <img src="./assets/clients-logo/atlantis-color.png">
@@ -296,24 +295,24 @@
             </div>
         </div>
         <div class="container1-clientes">
-                <img src="./assets/clients-logo/apoiolab-color.png">
-                <img src="./assets/clients-logo/atlantis-color.png">
-                <img src="./assets/clients-logo/biociencia-color.png">
-                <img src="./assets/clients-logo/bioproxjr-color.png">
-                <img src="./assets/clients-logo/gntlab-color.png">
-                <img src="./assets/clients-logo/grupobr4-color.png">
-                <img src="./assets/clients-logo/lanlab-color.png">
-                <img src="./assets/clients-logo/bioxtracta-color.png">
-                <img src="./assets/clients-logo/jflab-color.png">
-                <img src="./assets/clients-logo/apoiolab-color.png">
-                <img src="./assets/clients-logo/atlantis-color.png">
-                <img src="./assets/clients-logo/biociencia-color.png">
-                <img src="./assets/clients-logo/bioproxjr-color.png">
-                <img src="./assets/clients-logo/gntlab-color.png">
-                <img src="./assets/clients-logo/grupobr4-color.png">
-                <img src="./assets/clients-logo/lanlab-color.png">
-                <img src="./assets/clients-logo/bioxtracta-color.png">
-                <img src="./assets/clients-logo/jflab-color.png">
+            <img src="./assets/clients-logo/atlantis-color.png">
+            <img src="./assets/clients-logo/biociencia-color.png">
+            <img src="./assets/clients-logo/bioproxjr-color.png">
+            <img src="./assets/clients-logo/bioxtracta-color.png">
+            <img src="./assets/clients-logo/citogem-color.png">
+            <img src="./assets/clients-logo/gntlab-color.png">
+            <img src="./assets/clients-logo/grupobr4-color.png">
+            <img src="./assets/clients-logo/ion-nutri-color.png">
+            <img src="./assets/clients-logo/lanlab-color.png">
+            <img src="./assets/clients-logo/atlantis-color.png">
+            <img src="./assets/clients-logo/biociencia-color.png">
+            <img src="./assets/clients-logo/bioproxjr-color.png">
+            <img src="./assets/clients-logo/bioxtracta-color.png">
+            <img src="./assets/clients-logo/citogem-color.png">
+            <img src="./assets/clients-logo/gntlab-color.png">
+            <img src="./assets/clients-logo/grupobr4-color.png">
+            <img src="./assets/clients-logo/ion-nutri-color.png">
+            <img src="./assets/clients-logo/lanlab-color.png">
         </div>
         <div class="container2-clientes">
             <img src="./assets/clients-logo/novabio-color.png" />
@@ -525,9 +524,9 @@
                 </div>
                 <div class="institucional">
                     <h2 class="lang title" key="Institucional">Institucional</h2>
-                    <a class="lang text" key="QuemSomos" href="./pages/quem-somos.html">Quem Somos</a><br>
-                    <a class="lang text" key="Equipe" href="./pages/equipe.html">Equipe</a><br>
-                    <a class="lang text" key="Contato" href="./pages/contato.html">Contato</a>
+                    <a class="lang text" key="QuemSomos" onclick="handleQuemSomos()">Quem Somos</a><br>
+                    <a class="lang text" key="Equipe" onclick="handleEquipe()">Equipe</a><br>
+                    <a class="lang text" key="Contato" onclick="handleContato()">Contato</a>
                 </div>
                 <div class="contato">
                     <h2 class="lang title" key="Contato">Contato</h2>
@@ -551,7 +550,7 @@
                 <div class="final-footer-mobile">
                     <hr />
                     <p class="lang up-copyright" key="DesenvolvidoComMuito">Desenvolvido com muito ♥ por Eleven </p>
-                    <a class="lang copyright" key="TodosDireitos" href="./pages/politica-privacidade.html">
+                    <a class="lang copyright" key="TodosDireitos" href="./pages/politica-privacidade">
                         © 2023 Todos os Direitos Reservados <br>
                         Política de Privacidade | Termos de Uso
                     </a>
